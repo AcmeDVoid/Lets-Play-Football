@@ -1,4 +1,4 @@
-https://travis-ci.com/AcmeDVoid/TheBrogrammer.svg?token=u2SJCaqsHMs5vGCjvbZp&branch=master
+<img src="https://travis-ci.com/AcmeDVoid/TheBrogrammer.svg?token=u2SJCaqsHMs5vGCjvbZp&branch=master">
 # TheBrogrammer
 CS1D Final Project
 
