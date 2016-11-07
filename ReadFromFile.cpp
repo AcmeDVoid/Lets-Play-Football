@@ -5,13 +5,14 @@
 
 void ReadFromFile(QString fileName, StadiumList &aMap)
 {
-    Stadium aStadium;
-
     QFile myFile(fileName);
     QString tempQStr;
-    int key = 9; // MUST CHANGE THIS BLOCK AFTER SPRINT 1
     double tempDouble;
     QTextStream in(&myFile);
+    Stadium aStadium;
+
+    StadiumNote *aStadiumNote;
+    aStadiumNote = new StadiumNote;
 
     // Check file is unreadable
     if(!myFile.open(QFile::ReadOnly | QFile::Text))
@@ -23,47 +24,48 @@ void ReadFromFile(QString fileName, StadiumList &aMap)
     {
         while(!in.atEnd())
         {
-
             // Read team name
             tempQStr = in.readLine();
-            aStadium.setTeamName(tempQStr);
+            aStadiumNote->value.setTeamName(tempQStr);
 
             // Read stadium name
             tempQStr = in.readLine();
-            aStadium.setStadiumName(tempQStr);
+            aStadiumNote->value.setStadiumName(tempQStr);
 
             // Read seating capacity and clear buffer after that
             in >> tempDouble;
-            aStadium.setSeatingCapacity(tempDouble);
+            aStadiumNote->value.setSeatingCapacity(tempDouble);
             in.readLine();
 
 
             // Read location
             tempQStr = in.readLine();
-            aStadium.setLocation(tempQStr);
+            aStadiumNote->value.setLocation(tempQStr);
 
             // Read conference
             tempQStr = in.readLine();
-            aStadium.setConference(tempQStr);
+            aStadiumNote->value.setConference(tempQStr);
 
             // Read surface type
             tempQStr = in.readLine();
-            aStadium.setSurfaceType(tempQStr);
+            aStadiumNote->value.setSurfaceType(tempQStr);
 
             // Read stadium roof type
             tempQStr = in.readLine();
-            aStadium.setRootType(tempQStr);
+            aStadiumNote->value.setRootType(tempQStr);
 
             // Read star player
             tempQStr = in.readLine();
-            aStadium.setStarPlayer(tempQStr);
+            aStadiumNote->value.setStarPlayer(tempQStr);
 
-            // Read blank line
-            in.flush();
+            aStadium = aStadiumNote->value;
 
             aMap.put(1,aStadium);
 
+            aStadiumNote = aStadiumNote->next;
         }
+
+        delete aStadiumNote;
     }
 
     myFile.close();

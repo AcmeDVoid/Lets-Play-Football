@@ -2,22 +2,21 @@
 #include <QApplication>
 #include <StadiumList.h>
 #include "MyHeader.h"
+#include "StadiumListUI.h"
 
 int main(int argc, char *argv[])
 {
-//    QApplication a(argc, argv);
-//    MainWindow w;
-//    w.show();
+    QApplication a(argc, argv);
 
-    StadiumList myMap;
 
-    ReadFromFile("NFL Information.txt",myMap);
+    StadiumListUI b;
 
-    myMap.print();
+    b.show();
 
 
 
 
-    return 0;
-//    return a.exec();
+
+//    return 0;
+    return a.exec();
 }

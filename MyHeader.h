@@ -1,5 +1,6 @@
 #ifndef MYHEADER_H
 #define MYHEADER_H
+#include "StadiumList.h"
 
 void ReadFromFile(QString fileName, StadiumList &aMap);
 

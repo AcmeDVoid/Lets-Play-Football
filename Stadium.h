@@ -58,6 +58,7 @@ class Stadium
         // Overload assignment operator
         Stadium operator=(Stadium const &rhs);
 
+
 };
 
 #endif // INFORMATIONCLASS_H
