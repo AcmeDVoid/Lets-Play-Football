@@ -13,4 +13,4 @@
  script:
   - source /opt/qt57/bin/qt57-env.sh
   - /opt/qt57/bin/qmake
-  - make
+  - make 
