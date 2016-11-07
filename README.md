@@ -1,5 +1,5 @@
-<img src="https://travis-ci.com/AcmeDVoid/TheBrogrammer.svg?token=u2SJCaqsHMs5vGCjvbZp&branch=master">
-# TheBrogrammer
+
+# TheBrogrammer <img src="https://travis-ci.com/AcmeDVoid/TheBrogrammer.svg?token=u2SJCaqsHMs5vGCjvbZp&branch=master"> <a href = "https://travis-ci.com/AcmeDVoid/TheBrogrammer"> Status Detail </a>
 CS1D Final Project
 
 
