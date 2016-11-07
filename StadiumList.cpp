@@ -12,22 +12,20 @@ StadiumList::StadiumList()
 StadiumList::~StadiumList()
 {
 
-    StadiumNote *delPtr;
+    StadiumNode *delPtr;
 
     // Check if the list is not empty
     if (head !=NULL)
     {
-        delPtr = head;
         while (delPtr != NULL)
         {
+            delPtr = head;
+
             head->next = head;
             head->prev = NULL;
             delete delPtr;
             delPtr = NULL;
             mapSize--;
-
-            // Re-point delPtr to head for next deletion
-            delPtr = head;
         }
 
         // Once the deletion is complete, set tail and head to NULL;
@@ -57,9 +55,9 @@ bool StadiumList::empty() const
     }
 }
 
-StadiumNote* StadiumList::find(int aKey)
+StadiumNode* StadiumList::find(int aKey)
 {
-    StadiumNote *findPtr;
+    StadiumNode *findPtr;
     findPtr = head;
     bool check = false;
 
@@ -99,11 +97,11 @@ StadiumNote* StadiumList::find(int aKey)
 
 }
 
-StadiumNote *StadiumList::insert(int aKey, Stadium aValue)
+StadiumNode *StadiumList::insert(int aKey, Stadium aValue)
 {
     // Create a node
-    StadiumNote *tempPtr;
-    tempPtr = new StadiumNote;
+    StadiumNode *tempPtr;
+    tempPtr = new StadiumNode;
 
     tempPtr->key = aKey;
     tempPtr->value = aValue;
@@ -134,9 +132,9 @@ StadiumNote *StadiumList::insert(int aKey, Stadium aValue)
     return tempPtr;
 }
 
-StadiumNote *StadiumList::put(int aKey, Stadium aValue)
+StadiumNode *StadiumList::put(int aKey, Stadium &aValue)
 {
-    StadiumNote *tempPtr;
+    StadiumNode *tempPtr;
     tempPtr = head;
 
     bool check = false;
@@ -174,7 +172,7 @@ StadiumNote *StadiumList::put(int aKey, Stadium aValue)
 
 void StadiumList::removeNode(int aKey)
 {
-    StadiumNote *delPtr;
+    StadiumNode *delPtr;
 
     if (head != NULL)
     {
@@ -216,7 +214,7 @@ void StadiumList::removeNode(int aKey)
         else
         {
             // Create 2nd pointer for deletion
-            StadiumNote *tempPtr;
+            StadiumNode *tempPtr;
 
             // Check if aKey is already exist in the list
             while(delPtr != NULL)
@@ -246,7 +244,7 @@ void StadiumList::removeNode(int aKey)
 
 void StadiumList::remove(int aKey)
 {
-    StadiumNote *tempPtr;
+    StadiumNode *tempPtr;
     tempPtr = head;
 
     bool check = false;
@@ -275,12 +273,12 @@ void StadiumList::remove(int aKey)
     }
 }
 
-StadiumNote* StadiumList::begin() const
+StadiumNode* StadiumList::begin() const
 {
     return head;
 }
 
-StadiumNote* StadiumList::end() const
+StadiumNode* StadiumList::end() const
 {
     return tail;
 }
@@ -288,7 +286,7 @@ StadiumNote* StadiumList::end() const
 
 void StadiumList::print() const
 {
-    StadiumNote *tempPtr;
+    StadiumNode *tempPtr;
 
     if (head != NULL)
     {

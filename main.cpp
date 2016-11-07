@@ -9,11 +9,15 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
 
-    StadiumListUI b;
+    StadiumListUI w;
 
-    b.show();
+    w.show();
 
+//    StadiumList aMap;
 
+//    ReadFromFile("NFL Information.txt",aMap);
+
+//    aMap.print();
 
 
 

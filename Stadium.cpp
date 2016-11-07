@@ -98,7 +98,7 @@ QString Stadium::getStarPlayer() const
 }
 
 // Overloading assignment operator
-Stadium Stadium::operator= (Stadium const &rhs)
+Stadium& Stadium::operator= (Stadium const &rhs)
 {
     teamName = rhs.getTeamName();
     stadiumName = rhs.getStadiumName();

@@ -1,17 +1,21 @@
 #ifndef STADIUMS_H
 #define STADIUMS_H
 
-#include "StadiumNote.h"
+#include "StadiumNode.h"
 #include <QDebug>
 
+// This class creates map based on a doubly linked list
+// Using the information of the stadium
 class StadiumList
 {
     private:
-        StadiumNote *head;
-        StadiumNote *tail;
-        int mapSize;
+        StadiumNode *head;
+        StadiumNode *tail;
+        int mapSize;                    // Size of the map
 
     public:
+
+
         StadiumList();
 
         ~StadiumList();
@@ -20,23 +24,23 @@ class StadiumList
 
         bool empty() const;
 
-        StadiumNote *find(int aKey);
+        StadiumNode *find(int aKey);
 
-        StadiumNote *put(int aKey, Stadium aValue);
+        StadiumNode *put(int aKey, Stadium &aValue);
 
         void remove(int aKey);
 
 //        void remove(StadiumNote *entry);
 
-        StadiumNote *begin() const;
+        StadiumNode *begin() const;
 
-        StadiumNote *end() const;
+        StadiumNode *end() const;
 
         void print() const;
 
     protected:
         // Helper function - insert
-        StadiumNote *insert(int aKey, Stadium aValue);
+        StadiumNode *insert(int aKey, Stadium aValue);
 
         // Helper function - delete
         void removeNode(int aKey);
