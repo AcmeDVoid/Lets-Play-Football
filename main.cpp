@@ -7,11 +7,12 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-
+    MainWindow x;
+    x.show();
 
     StadiumListUI w;
 
-    w.show();
+    //w.show();
 
 //    StadiumList aMap;
 
