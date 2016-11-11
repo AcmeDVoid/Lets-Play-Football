@@ -38,9 +38,8 @@ StadiumListUI::StadiumListUI(QWidget *parent) :
     {
         ui->tableWidget->insertRow(i);
         ui->tableWidget->setItem(i,0,new QTableWidgetItem(iterator->value.getTeamName()));
-        qDebug() << iterator->value.getTeamName();
         ui->tableWidget->setItem(i,1,new QTableWidgetItem(iterator->value.getStadiumName()));
-        ui->tableWidget->setItem(i,2,new QTableWidgetItem(iterator->value.getSeatingCapacity()));
+        ui->tableWidget->setItem(i,2,new QTableWidgetItem(QString::number(iterator->value.getSeatingCapacity())));
         ui->tableWidget->setItem(i,3,new QTableWidgetItem(iterator->value.getLocation()));
         ui->tableWidget->setItem(i,4,new QTableWidgetItem(iterator->value.getConference()));
         ui->tableWidget->setItem(i,5,new QTableWidgetItem(iterator->value.getSurfaceType()));

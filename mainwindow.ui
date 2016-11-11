@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -35,52 +35,62 @@
        <rect>
         <x>10</x>
         <y>0</y>
-        <width>371</width>
-        <height>451</height>
+        <width>681</width>
+        <height>491</height>
        </rect>
       </property>
-      <row>
-       <property name="text">
-        <string>New Row</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>New Row</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>New Row</string>
-       </property>
-      </row>
       <column>
        <property name="text">
-        <string>New Column</string>
+        <string>Team Name</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>New Column</string>
+        <string>Stadium Name</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>New Column</string>
+        <string>Seating Capacity</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Location</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Conference</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Surface Type</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Stadium Roof Type</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Star Player</string>
        </property>
       </column>
      </widget>
      <widget class="QPushButton" name="pushButton_4">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>60</y>
-        <width>75</width>
-        <height>23</height>
+        <x>594</x>
+        <y>500</y>
+        <width>101</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>Input From File</string>
       </property>
      </widget>
     </widget>

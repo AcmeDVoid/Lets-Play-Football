@@ -130,6 +130,7 @@ StadiumNode *StadiumList::insert(QString aKey, Stadium aValue)
         tail = tempPtr;
     }
 
+    mapSize++;
     return tempPtr;
 }
 
@@ -239,8 +240,9 @@ void StadiumList::removeNode(QString aKey)
             }
         }
 
-
+        mapSize--;
     }
+
 }
 
 void StadiumList::remove(QString aKey)

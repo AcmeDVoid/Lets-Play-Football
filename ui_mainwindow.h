@@ -86,27 +86,29 @@ public:
         tab = new QWidget();
         tab->setObjectName(QStringLiteral("tab"));
         tableWidget = new QTableWidget(tab);
-        if (tableWidget->columnCount() < 3)
-            tableWidget->setColumnCount(3);
+        if (tableWidget->columnCount() < 8)
+            tableWidget->setColumnCount(8);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem1);
         QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(2, __qtablewidgetitem2);
-        if (tableWidget->rowCount() < 3)
-            tableWidget->setRowCount(3);
         QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
-        tableWidget->setVerticalHeaderItem(0, __qtablewidgetitem3);
+        tableWidget->setHorizontalHeaderItem(3, __qtablewidgetitem3);
         QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
-        tableWidget->setVerticalHeaderItem(1, __qtablewidgetitem4);
+        tableWidget->setHorizontalHeaderItem(4, __qtablewidgetitem4);
         QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
-        tableWidget->setVerticalHeaderItem(2, __qtablewidgetitem5);
+        tableWidget->setHorizontalHeaderItem(5, __qtablewidgetitem5);
+        QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(6, __qtablewidgetitem6);
+        QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(7, __qtablewidgetitem7);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
-        tableWidget->setGeometry(QRect(10, 0, 371, 451));
+        tableWidget->setGeometry(QRect(10, 0, 681, 491));
         pushButton_4 = new QPushButton(tab);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setGeometry(QRect(460, 60, 75, 23));
+        pushButton_4->setGeometry(QRect(594, 500, 101, 21));
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QStringLiteral("tab_2"));
@@ -273,7 +275,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
         stackedWidget->setCurrentIndex(0);
 
 
@@ -284,18 +286,22 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
-        ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "New Column", 0));
+        ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "Team Name", 0));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
-        ___qtablewidgetitem1->setText(QApplication::translate("MainWindow", "New Column", 0));
+        ___qtablewidgetitem1->setText(QApplication::translate("MainWindow", "Stadium Name", 0));
         QTableWidgetItem *___qtablewidgetitem2 = tableWidget->horizontalHeaderItem(2);
-        ___qtablewidgetitem2->setText(QApplication::translate("MainWindow", "New Column", 0));
-        QTableWidgetItem *___qtablewidgetitem3 = tableWidget->verticalHeaderItem(0);
-        ___qtablewidgetitem3->setText(QApplication::translate("MainWindow", "New Row", 0));
-        QTableWidgetItem *___qtablewidgetitem4 = tableWidget->verticalHeaderItem(1);
-        ___qtablewidgetitem4->setText(QApplication::translate("MainWindow", "New Row", 0));
-        QTableWidgetItem *___qtablewidgetitem5 = tableWidget->verticalHeaderItem(2);
-        ___qtablewidgetitem5->setText(QApplication::translate("MainWindow", "New Row", 0));
-        pushButton_4->setText(QApplication::translate("MainWindow", "PushButton", 0));
+        ___qtablewidgetitem2->setText(QApplication::translate("MainWindow", "Seating Capacity", 0));
+        QTableWidgetItem *___qtablewidgetitem3 = tableWidget->horizontalHeaderItem(3);
+        ___qtablewidgetitem3->setText(QApplication::translate("MainWindow", "Location", 0));
+        QTableWidgetItem *___qtablewidgetitem4 = tableWidget->horizontalHeaderItem(4);
+        ___qtablewidgetitem4->setText(QApplication::translate("MainWindow", "Conference", 0));
+        QTableWidgetItem *___qtablewidgetitem5 = tableWidget->horizontalHeaderItem(5);
+        ___qtablewidgetitem5->setText(QApplication::translate("MainWindow", "Surface Type", 0));
+        QTableWidgetItem *___qtablewidgetitem6 = tableWidget->horizontalHeaderItem(6);
+        ___qtablewidgetitem6->setText(QApplication::translate("MainWindow", "Stadium Roof Type", 0));
+        QTableWidgetItem *___qtablewidgetitem7 = tableWidget->horizontalHeaderItem(7);
+        ___qtablewidgetitem7->setText(QApplication::translate("MainWindow", "Star Player", 0));
+        pushButton_4->setText(QApplication::translate("MainWindow", "Input From File", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "View Info", 0));
         label->setText(QApplication::translate("MainWindow", "Password", 0));
         pushButton_LoginButton->setText(QApplication::translate("MainWindow", "Login", 0));

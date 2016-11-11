@@ -68,9 +68,6 @@ void ReadFromFile(QString fileName, StadiumList &aMap)
 
             // Add new node to the map
             aMap.put(key,aStadium);
-
-            aMap.print();
-
         }
 
     }
