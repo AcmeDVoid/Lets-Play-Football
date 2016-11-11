@@ -9,6 +9,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+//    QWidget* widget = new QWidget(MainWindow);
+//    widget->setLayout(gridLayout);
+//    MainWindow->setCentralWidget(widget);
 }
 
 MainWindow::~MainWindow()

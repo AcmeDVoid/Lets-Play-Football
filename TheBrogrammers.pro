@@ -17,16 +17,13 @@ SOURCES += main.cpp\
     StadiumList.cpp \
     Stadium.cpp \
     ReadFromFile.cpp \
-    StadiumListUI.cpp \
     SortedLists.cpp
 
 HEADERS  += mainwindow.h \
     StadiumList.h \
     Stadium.h \
     MyHeader.h \
-    StadiumListUI.h \
     StadiumNode.h \
     SortedLists.h
 
-FORMS    += mainwindow.ui \
-    stadiumlistui.ui
+FORMS    += mainwindow.ui
