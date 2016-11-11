@@ -55,7 +55,7 @@ bool StadiumList::empty() const
     }
 }
 
-StadiumNode* StadiumList::find(int aKey)
+StadiumNode* StadiumList::find(QString aKey)
 {
     StadiumNode *findPtr;
     findPtr = head;
@@ -97,7 +97,7 @@ StadiumNode* StadiumList::find(int aKey)
 
 }
 
-StadiumNode *StadiumList::insert(int aKey, Stadium aValue)
+StadiumNode *StadiumList::insert(QString aKey, Stadium aValue)
 {
     // Create a node
     StadiumNode *tempPtr;
@@ -117,6 +117,7 @@ StadiumNode *StadiumList::insert(int aKey, Stadium aValue)
     else
     {
         // Make tail point to the last node
+        tail = head;
         while(tail->next != NULL)
         {
             tail = tail->next;
@@ -129,10 +130,11 @@ StadiumNode *StadiumList::insert(int aKey, Stadium aValue)
         tail = tempPtr;
     }
 
+    mapSize++;
     return tempPtr;
 }
 
-StadiumNode *StadiumList::put(int aKey, Stadium &aValue)
+StadiumNode *StadiumList::put(QString aKey, Stadium &aValue)
 {
     StadiumNode *tempPtr;
     tempPtr = head;
@@ -170,7 +172,7 @@ StadiumNode *StadiumList::put(int aKey, Stadium &aValue)
     return tempPtr;
 }
 
-void StadiumList::removeNode(int aKey)
+void StadiumList::removeNode(QString aKey)
 {
     StadiumNode *delPtr;
 
@@ -238,11 +240,12 @@ void StadiumList::removeNode(int aKey)
             }
         }
 
-
+        mapSize--;
     }
+
 }
 
-void StadiumList::remove(int aKey)
+void StadiumList::remove(QString aKey)
 {
     StadiumNode *tempPtr;
     tempPtr = head;
@@ -298,7 +301,7 @@ void StadiumList::print() const
 
         while (tempPtr != NULL)
         {
-            qDebug() << tempPtr->key << " | " << tempPtr->value.getTeamName()
+            qDebug() << tempPtr->key << " |||| " << tempPtr->value.getTeamName()
                      << " | " << tempPtr->value.getStadiumName() << " | "
                      << tempPtr->value.getSeatingCapacity() << " | "
                      << tempPtr->value.getLocation() << " | "

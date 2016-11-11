@@ -9,7 +9,7 @@ class StadiumNode
     public:
 
         // Property
-        int key;                // Distance from Los Angeles Memorial Coliseum to the stadium
+        QString key;             // Name of the Stadium
         Stadium value;          // Information about the stadium
         StadiumNode *next;
         StadiumNode *prev;
@@ -18,7 +18,7 @@ class StadiumNode
         // This method instantiate the node
         StadiumNode()
         {
-            key = 0;
+            key.clear();
             Stadium();
             next = NULL;
             prev = NULL;
