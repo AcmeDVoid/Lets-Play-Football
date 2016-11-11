@@ -1,6 +1,7 @@
 #ifndef MYHEADER_H
 #define MYHEADER_H
 #include "StadiumList.h"
+#include <QDebug>
 
 // ReadFromFile function
 // This function takes the file name QString typed and a List as its parameters

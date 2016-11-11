@@ -10,14 +10,14 @@
 void ReadFromFile(QString fileName, StadiumList &aMap)
 {
     QFile myFile(fileName);
-    QString tempQStr1, tempQStr2, tempQStr3, tempQStr4, tempQStr5, tempQStr6, tempQStr7;
-    double tempDouble;
+    QString readLine;
+    QString key;
+    double readDouble;
     QTextStream in(&myFile);
     Stadium aStadium;
 
     // Create new node for adding
-    StadiumNode *aStadiumNote;
-    aStadiumNote = new StadiumNode;
+    StadiumNode aStadiumNote;
 
     // Check file is unreadable
     if(!myFile.open(QFile::ReadOnly | QFile::Text))
@@ -27,56 +27,52 @@ void ReadFromFile(QString fileName, StadiumList &aMap)
     // If not, read the file
     else
     {
-        int i = 0;
-        while(!in.atEnd() && i < aMap.size())
+        while(!in.atEnd())
         {
             // Read team name
-            tempQStr1 = in.readLine();
-            aStadiumNote->value.setTeamName(tempQStr1);
+            readLine = in.readLine();
+            key = readLine;
+            aStadiumNote.value.setTeamName(readLine);
 
             // Read stadium name
-            tempQStr2 = in.readLine();
-            aStadiumNote->value.setStadiumName(tempQStr2);
+            readLine = in.readLine();
+            aStadiumNote.value.setStadiumName(readLine);
 
             // Read seating capacity and clear buffer after that
-            in >> tempDouble;
-            aStadiumNote->value.setSeatingCapacity(tempDouble);
+            in >> readDouble;
+            aStadiumNote.value.setSeatingCapacity(readDouble);
             in.readLine();
 
 
             // Read location
-            tempQStr3 = in.readLine();
-            aStadiumNote->value.setLocation(tempQStr3);
+            readLine = in.readLine();
+            aStadiumNote.value.setLocation(readLine);
 
             // Read conference
-            tempQStr4 = in.readLine();
-            aStadiumNote->value.setConference(tempQStr4);
+            readLine = in.readLine();
+            aStadiumNote.value.setConference(readLine);
 
             // Read surface type
-            tempQStr5 = in.readLine();
-            aStadiumNote->value.setSurfaceType(tempQStr5);
+            readLine = in.readLine();
+            aStadiumNote.value.setSurfaceType(readLine);
 
             // Read stadium roof type
-            tempQStr6 = in.readLine();
-            aStadiumNote->value.setRootType(tempQStr6);
+            readLine = in.readLine();
+            aStadiumNote.value.setRootType(readLine);
 
             // Read star player
-            tempQStr7 = in.readLine();
-            aStadiumNote->value.setStarPlayer(tempQStr7);
+            readLine = in.readLine();
+            aStadiumNote.value.setStarPlayer(readLine);
 
-            aStadium = aStadiumNote->value;
+            aStadium = aStadiumNote.value;
 
             // Add new node to the map
-            aMap.put(i,aStadium);
+            aMap.put(key,aStadium);
 
-            // Make a new node
-            aStadiumNote = new StadiumNode;
-            i++;
+            aMap.print();
 
         }
 
-        // Delete to avoid memory leak
-        delete aStadiumNote;
     }
 
     myFile.close();

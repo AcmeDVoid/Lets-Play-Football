@@ -7,18 +7,18 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow x;
-    x.show();
+//    MainWindow x;
+//    x.show();
 
-    StadiumListUI w;
+//    StadiumListUI w;
 
-    //w.show();
+//    w.show();
 
-//    StadiumList aMap;
+    StadiumList aMap;
 
-//    ReadFromFile("NFL Information.txt",aMap);
+    ReadFromFile("NFL Information.txt",aMap);
 
-//    aMap.print();
+    aMap.print();
 
 
 
