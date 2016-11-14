@@ -1,53 +1,58 @@
-//#ifndef SORTEDLISTS_H
-//#define SORTEDLISTS_H
+#ifndef SORTEDLISTS_H
+#define SORTEDLISTS_H
 
-//#include "MyHeader.h"
+#include "MyHeader.h"
 
-//class SortedLists
-//{
-//    private:
-//        StadiumList mySortedList;
+class SortedLists
+{
+    private:
+        StadiumList myMap;
+        QVector<Stadium> mySortedList;
 
-//    public:
-//        SortedLists();
+    public:
+        SortedLists();
 
-//        ~SortedLists();
+        ~SortedLists();
 
-//        // byTeamName method
-//        // this method creates a list of the NFL teams sorted by team name.
-//        StadiumList byTeamName();
+        // byTeamName method
+        // this method creates a list of the NFL teams sorted by team name.
+        QVector<Stadium> byTeamName();
 
-//        // stadiumbyTeamName method
-//        // this method creates a list of NFL stadiums and their corresponding team name sorted by team name.
-//        StadiumList stadiumbyTeamName(QVector <Stadium*> StadiumList, QString conference);
+        // stadiumbyTeamName method
+        // this method creates a list of NFL stadiums and their corresponding team name sorted by team name.
+        QVector<Stadium> stadiumbyTeamName();
 
-//        // AFCbyTeamName method
-//        // This method creates a list of American Football Conference teams sorted by team name.
-//        StadiumList AFCbyTeamName(QVector <Stadium*> StadiumList, QString conference);
+        // AFCbyTeamName method
+        // This method creates a list of American Football Conference teams sorted by team name.
+        QVector<Stadium> AFCbyTeamName();
 
-//        // NFCbyTeamName method
-//        // This method creates a list of National Football Conference teams sorted by team name.
-//        StadiumList NFCbyTeamName(QVector <Stadium*> StadiumList, QString conference);
+        // NFCbyTeamName method
+        // This method creates a list of National Football Conference teams sorted by team name.
+        QVector<Stadium> NFCbyTeamName();
 
-//        // openTypebyStadiumName method
-//        // This method creates a list of stadiums that have an “open” stadium roof type and
-//        StadiumList openTypebyStadiumName(QVector <Stadium*> StadiumList, QString type);
+        // openTypebyStadiumName method
+        // This method creates a list of stadiums that have an “open” stadium roof type and
+        QVector<Stadium> openTypebyStadiumName();
 
-//        // starPlayerbyTeamName method
-//        /* This method creates a list of NFL star players and their corresponding team name .
-//         * sorted by team name */
-//        StadiumList starPlayerbyTeamName(QVector <Stadium*> StadiumList, QString playerName);
+        // starPlayerbyTeamName method
+        /* This method creates a list of NFL star players and their corresponding team name .
+         * sorted by team name */
+        QVector<Stadium> starPlayerbyTeamName();
 
-//        // AllbySeatCap1 method
-//        /* This method creates a list of NFL teams, their stadium names, their seating capacity,
-//         *  their corresponding location sorted by seating capacity.*/
-//        StadiumList AllbySeatCap1(QVector <Stadium*> StadiumList);
+        // AllbySeatCap1 method
+        /* This method creates a list of NFL teams, their stadium names, their seating capacity,
+         *  their corresponding location sorted by seating capacity.*/
+        QVector<Stadium> AllbySeatCap1();
 
-//        // AllbySeatCap2
-//        /* This method creates a list of NFL teams, their stadium names, their surface type,
-//         * their corresponding location sorted by seating capacity. */
-//        StadiumList AllbySeatCap2(QVector <Stadium*> StadiumList);
+        // AllbySeatCap2
+        /* This method creates a list of NFL teams, their stadium names, their surface type,
+         * their corresponding location sorted by seating capacity. */
+        QVector<Stadium> AllbySeatCap2();
 
-//};
+        QVector<Stadium> GetStadiumList() const;
 
-//#endif // SORTEDLISTS_H
+        bool isEmpty() const;
+
+};
+
+#endif // SORTEDLISTS_H

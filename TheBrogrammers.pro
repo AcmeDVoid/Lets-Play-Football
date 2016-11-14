@@ -17,13 +17,22 @@ SOURCES += main.cpp\
     StadiumList.cpp \
     Stadium.cpp \
     ReadFromFile.cpp \
-    SortedLists.cpp
+    SortedLists.cpp \
+    mainvoid.cpp \
+    log_in.cpp
 
 HEADERS  += mainwindow.h \
     StadiumList.h \
     Stadium.h \
     MyHeader.h \
     StadiumNode.h \
-    SortedLists.h
+    SortedLists.h \
+    mainvoid.h \
+    log_in.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    mainvoid.ui \
+    log_in.ui
+
+RESOURCES += \
+    image.qrc

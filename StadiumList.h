@@ -3,6 +3,7 @@
 
 #include "StadiumNode.h"
 #include <QDebug>
+#include <QVector>
 
 // This class creates map based on a doubly linked list
 // Using the information of the stadium
@@ -34,7 +35,9 @@ class StadiumList
 
         StadiumNode *end() const;
 
-        void print() const;
+        void getAllStadiums(QVector <Stadium> &valueList) const;
+
+        double getTotalSeatingCapacity() const;
 
     protected:
         // Helper function - insert
@@ -42,6 +45,9 @@ class StadiumList
 
         // Helper function - delete
         void removeNode(QString aKey);
+
+
+
 
 
 

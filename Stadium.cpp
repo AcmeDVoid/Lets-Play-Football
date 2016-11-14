@@ -87,7 +87,7 @@ QString Stadium::getSurfaceType() const
     return surfaceType;
 }
 
-QString Stadium::getRootType() const
+QString Stadium::getRoofType() const
 {
     return roofType;
 }
@@ -106,7 +106,7 @@ Stadium& Stadium::operator= (Stadium const &rhs)
     location = rhs.getLocation();
     conference = rhs.getConference();
     surfaceType = rhs.getSurfaceType();
-    roofType = rhs.getRootType();
+    roofType = rhs.getRoofType();
     starPlayer = rhs.getStarPlayer();
     return *this;
 }
