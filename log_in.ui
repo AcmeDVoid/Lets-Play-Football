@@ -36,7 +36,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>You must input the password in order to proceed</string>
+    <string>Input password:</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="passwordLine">
