@@ -1,5 +1,7 @@
 #include "StadiumList.h"
 
+// Default constructor
+// This constructor instantiates an object
 StadiumList::StadiumList()
 {
     // Initialize all property
@@ -9,6 +11,8 @@ StadiumList::StadiumList()
     mapSize = 0;
 }
 
+// Destructor
+// This destructor terminates the object when out of scope
 StadiumList::~StadiumList()
 {
 
@@ -34,12 +38,16 @@ StadiumList::~StadiumList()
     }
 }
 
+// size method
+// This methods return the size of the map
 int StadiumList::size() const
 {
     // return the size
     return mapSize;
 }
 
+// empty method
+// This method returns a bool type if the map is empty or not
 bool StadiumList::empty() const
 {
     // Check if the list is empty
@@ -55,6 +63,8 @@ bool StadiumList::empty() const
     }
 }
 
+// find method
+// This method finds return the Node based on the key of that Node
 StadiumNode* StadiumList::find(QString aKey)
 {
     StadiumNode *findPtr;
@@ -97,6 +107,8 @@ StadiumNode* StadiumList::find(QString aKey)
 
 }
 
+// Helper function - insert
+// This function inserts a Node into the doubly linked list
 StadiumNode *StadiumList::insert(QString aKey, Stadium aValue)
 {
     // Create a node
@@ -134,6 +146,8 @@ StadiumNode *StadiumList::insert(QString aKey, Stadium aValue)
     return tempPtr;
 }
 
+// put method
+// This methods insert/put a Node into the map
 StadiumNode *StadiumList::put(QString aKey, Stadium &aValue)
 {
     StadiumNode *tempPtr;
@@ -172,6 +186,8 @@ StadiumNode *StadiumList::put(QString aKey, Stadium &aValue)
     return tempPtr;
 }
 
+// Helper function - delete
+// This method removes a Node from the doubly linked list
 void StadiumList::removeNode(QString aKey)
 {
     StadiumNode *delPtr;
@@ -245,6 +261,8 @@ void StadiumList::removeNode(QString aKey)
 
 }
 
+// remove method
+// This methods remove the Node based on the key
 void StadiumList::remove(QString aKey)
 {
     StadiumNode *tempPtr;
@@ -276,24 +294,34 @@ void StadiumList::remove(QString aKey)
     }
 }
 
+// begin method
+// This methods returns the first Node of the map
 StadiumNode* StadiumList::begin() const
 {
     return head;
 }
 
+// end method
+// This method returns the last Node of the map
 StadiumNode* StadiumList::end() const
 {
     return tail;
 }
 
+// getAllStadiums method
+// This method gets all of the stadiums which is from the value of each Node
 void StadiumList::getAllStadiums(QVector <Stadium> &valueList) const
 {
+    // Push every stadium information into the list
     for(StadiumNode *tempPtr = head; tempPtr != NULL; tempPtr = tempPtr->next)
     {
         valueList.push_back(tempPtr->value);
     }
+
 }
 
+// getTotalSeatingCapacity method
+// This methods gets the total seating capacity from all stadiums
 double StadiumList::getTotalSeatingCapacity() const
 {
     double accumulator = 0;
@@ -302,16 +330,12 @@ double StadiumList::getTotalSeatingCapacity() const
 
     tempPtr = head;
 
-    qDebug() << "accumulator = " + QString::number(accumulator);
-
+    // Accumulating all of the seating capacity from each stadium
     while (tempPtr != NULL)
     {
         accumulator += tempPtr->value.getSeatingCapacity();
-        qDebug() << "accumulator = accumulator + " << tempPtr->value.getSeatingCapacity();
         tempPtr = tempPtr->next;
     }
-
-    qDebug() << accumulator;
 
     return accumulator;
 }

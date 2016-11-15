@@ -16,6 +16,7 @@ class Stadium
         QString starPlayer;             // The team's Star Player
 
     public:
+
         // Default constructor
         // This contructor instantiates the object
         Stadium();
@@ -37,7 +38,7 @@ class Stadium
         // This method set the stadium name
         void setStadiumName(QString sName);
 
-        // setTeamName method
+        // setSeatingCapacity method
         // This method set the stadium seating capacity
         void setSeatingCapacity(double num);
 
@@ -45,51 +46,51 @@ class Stadium
         // This method set the stadium location
         void setLocation(QString newLocation);
 
-        // setTeamName method
+        // setConference method
         // This method set the team conference
         void setConference(QString newConf);
 
-        // setTeamName method
+        // setSurfaceType method
         // This method set the stadium surface type
         void setSurfaceType(QString type);
 
-        // setTeamName method
+        // setRootType method
         // This method set the stadium roof type
         void setRootType(QString roof);
 
-        // setTeamName method
+        // setStarPlayer method
         // This method set the team start player
         void setStarPlayer(QString playerName);
 
-        // setTeamName method
+        // getTeamName method
         // This method get the team name
         QString getTeamName() const;
 
-        // setTeamName method
+        // getStadiumName method
         // This method get the stadium name
         QString getStadiumName() const;
 
-        // setTeamName method
+        // getSeatingCapacity method
         // This method get the stadium seating capacity
         double getSeatingCapacity() const;
 
-        // setTeamName method
+        // getLocation method
         // This method get the stadium location
         QString getLocation() const;
 
-        // setTeamName method
+        // getConference method
         // This method get the team conference
         QString getConference() const;
 
-        // setTeamName method
+        // getSurfaceType method
         // This method get the tstadium surface type
         QString getSurfaceType() const;
 
-        // setTeamName method
+        // getRoofType method
         // This method get the stadium roof type
         QString getRoofType() const;
 
-        // setTeamName method
+        // getStarPlayer method
         // This method get the team star player
         QString getStarPlayer() const;
 
