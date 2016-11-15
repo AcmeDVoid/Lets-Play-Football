@@ -3,16 +3,16 @@
 
 #include "Stadium.h"
 
-// This class creates a pair based on a stadium
+// This class creates a pair based on a stadium information
 class StadiumNode
 {
     public:
 
         // Property
-        QString key;             // Name of the Stadium
+        QString key;            // Name of the Stadium
         Stadium value;          // Information about the stadium
-        StadiumNode *next;
-        StadiumNode *prev;
+        StadiumNode *next;      // Point to next Node
+        StadiumNode *prev;      // Point to the Node before
 
         // Default constructor
         // This method instantiate the node
@@ -23,6 +23,9 @@ class StadiumNode
             next = NULL;
             prev = NULL;
         }
+
+        // print method
+        // This method outputs the Node
         void printNode() const
         {
             // Output node
