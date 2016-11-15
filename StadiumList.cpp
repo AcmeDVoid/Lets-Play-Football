@@ -55,7 +55,7 @@ bool StadiumList::empty() const
     }
 }
 
-StadiumNode* StadiumList::find(int aKey)
+StadiumNode* StadiumList::find(QString aKey)
 {
     StadiumNode *findPtr;
     findPtr = head;
@@ -97,7 +97,7 @@ StadiumNode* StadiumList::find(int aKey)
 
 }
 
-StadiumNode *StadiumList::insert(int aKey, Stadium aValue)
+StadiumNode *StadiumList::insert(QString aKey, Stadium aValue)
 {
     // Create a node
     StadiumNode *tempPtr;
@@ -117,6 +117,7 @@ StadiumNode *StadiumList::insert(int aKey, Stadium aValue)
     else
     {
         // Make tail point to the last node
+        tail = head;
         while(tail->next != NULL)
         {
             tail = tail->next;
@@ -129,10 +130,11 @@ StadiumNode *StadiumList::insert(int aKey, Stadium aValue)
         tail = tempPtr;
     }
 
+    mapSize++;
     return tempPtr;
 }
 
-StadiumNode *StadiumList::put(int aKey, Stadium &aValue)
+StadiumNode *StadiumList::put(QString aKey, Stadium &aValue)
 {
     StadiumNode *tempPtr;
     tempPtr = head;
@@ -170,7 +172,7 @@ StadiumNode *StadiumList::put(int aKey, Stadium &aValue)
     return tempPtr;
 }
 
-void StadiumList::removeNode(int aKey)
+void StadiumList::removeNode(QString aKey)
 {
     StadiumNode *delPtr;
 
@@ -238,11 +240,12 @@ void StadiumList::removeNode(int aKey)
             }
         }
 
-
+        mapSize--;
     }
+
 }
 
-void StadiumList::remove(int aKey)
+void StadiumList::remove(QString aKey)
 {
     StadiumNode *tempPtr;
     tempPtr = head;
@@ -283,32 +286,60 @@ StadiumNode* StadiumList::end() const
     return tail;
 }
 
-
-void StadiumList::print() const
+void StadiumList::getAllStadiums(QVector <Stadium> &valueList) const
 {
+    for(StadiumNode *tempPtr = head; tempPtr != NULL; tempPtr = tempPtr->next)
+    {
+        valueList.push_back(tempPtr->value);
+    }
+}
+
+double StadiumList::getTotalSeatingCapacity() const
+{
+    double accumulator = 0;
+
     StadiumNode *tempPtr;
 
-    if (head != NULL)
+    tempPtr = head;
+
+    qDebug() << "accumulator = " + QString::number(accumulator);
+
+    while (tempPtr != NULL)
     {
-        tempPtr = head;
-
-        qDebug() << "key" << " | " << "team name | stadium name"
-                    << " | Seating Capacity | Location | Conference "
-                    << "| Surface Type | Stadium Roof Type | Star Player";
-
-        while (tempPtr != NULL)
-        {
-            qDebug() << tempPtr->key << " | " << tempPtr->value.getTeamName()
-                     << " | " << tempPtr->value.getStadiumName() << " | "
-                     << tempPtr->value.getSeatingCapacity() << " | "
-                     << tempPtr->value.getLocation() << " | "
-                     << tempPtr->value.getConference() << " | "
-                     << tempPtr->value.getSurfaceType() << " | "
-                     << tempPtr->value.getRootType() << " | "
-                     << tempPtr->value.getStarPlayer();
-
-            tempPtr = tempPtr->next;
-        }
+        accumulator += tempPtr->value.getSeatingCapacity();
+        qDebug() << "accumulator = accumulator + " << tempPtr->value.getSeatingCapacity();
+        tempPtr = tempPtr->next;
     }
 
+    qDebug() << accumulator;
+
+    return accumulator;
 }
+
+//void StadiumList::print() const
+//{
+//    StadiumNode *tempPtr;
+
+//    if (head != NULL)
+//    {
+//        tempPtr = head;
+
+//        qDebug() << "key" << " | " << "team name | stadium name"
+//                    << " | Seating Capacity | Location | Conference "
+//                    << "| Surface Type | Stadium Roof Type | Star Player";
+
+//        while (tempPtr != NULL)
+//        {
+//            qDebug() << tempPtr->key << " |||| " << tempPtr->value.getTeamName()
+//                     << " | " << tempPtr->value.getStadiumName() << " | "
+//                     << tempPtr->value.getSeatingCapacity() << " | "
+//                     << tempPtr->value.getLocation() << " | "
+//                     << tempPtr->value.getConference() << " | "
+//                     << tempPtr->value.getSurfaceType() << " | "
+//                     << tempPtr->value.getRootType() << " | "
+//                     << tempPtr->value.getStarPlayer();
+
+//            tempPtr = tempPtr->next;
+//        }
+//    }
+//}
