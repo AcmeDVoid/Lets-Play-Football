@@ -6,7 +6,6 @@ MainVoid::MainVoid(QWidget *parent) :
     ui(new Ui::MainVoid)
 {
     ui->setupUi(this);
-
     ui->comboBox->addItem(" ");
     ui->comboBox->addItem("NFL teams sorted by team name");
     ui->comboBox->addItem("NFL stadiums and their corresponding team name sorted by team name");

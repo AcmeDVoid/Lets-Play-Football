@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include <QMessageBox>
+#include "password.h"
+#include <QDebug>
 
 namespace Ui {
 class Log_In;
@@ -21,8 +23,11 @@ private slots:
 
     void on_signInButton_clicked();
 
+    void on_checkBox_clicked(bool checked);
+
 private:
     Ui::Log_In *ui;
+    Password adminHash;
 };
 
 #endif // LOG_IN_H

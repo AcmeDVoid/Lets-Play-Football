@@ -6,6 +6,7 @@
 #include <QLayout>
 #include <QDialog>
 #include "log_in.h"
+#include "password.h"
 #include "SortedLists.h"
 
 namespace Ui {

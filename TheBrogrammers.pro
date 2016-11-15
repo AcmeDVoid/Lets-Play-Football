@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     ReadFromFile.cpp \
     SortedLists.cpp \
     mainvoid.cpp \
-    log_in.cpp
+    log_in.cpp \
+    password.cpp
 
 HEADERS  += mainwindow.h \
     StadiumList.h \
@@ -28,7 +29,8 @@ HEADERS  += mainwindow.h \
     StadiumNode.h \
     SortedLists.h \
     mainvoid.h \
-    log_in.h
+    log_in.h \
+    password.h
 
 FORMS    += mainwindow.ui \
     mainvoid.ui \
