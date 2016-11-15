@@ -3,6 +3,10 @@
 #include "StadiumList.h"
 #include <QDebug>
 #include <algorithm>
+#include <QVector>
+#include <QMessageBox>
+#include <QWidget>
+#include <QTableWidget>
 
 // ReadFromFile function
 // This function takes the file name QString typed and a List as its parameters

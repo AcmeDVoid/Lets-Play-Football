@@ -87,7 +87,7 @@ class Stadium
 
         // setTeamName method
         // This method get the stadium roof type
-        QString getRootType() const;
+        QString getRoofType() const;
 
         // setTeamName method
         // This method get the team star player

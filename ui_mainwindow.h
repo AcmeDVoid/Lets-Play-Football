@@ -132,6 +132,7 @@ public:
 
         lineEdit_PasswordField = new QLineEdit(layoutWidget);
         lineEdit_PasswordField->setObjectName(QStringLiteral("lineEdit_PasswordField"));
+        lineEdit_PasswordField->setEchoMode(QLineEdit::Password);
 
         horizontalLayout->addWidget(lineEdit_PasswordField);
 
@@ -304,6 +305,7 @@ public:
         pushButton_4->setText(QApplication::translate("MainWindow", "Input From File", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "View Info", 0));
         label->setText(QApplication::translate("MainWindow", "Password", 0));
+        lineEdit_PasswordField->setPlaceholderText(QApplication::translate("MainWindow", "Input your password", 0));
         pushButton_LoginButton->setText(QApplication::translate("MainWindow", "Login", 0));
         pushButton->setText(QApplication::translate("MainWindow", "Add New Item", 0));
         label_2->setText(QApplication::translate("MainWindow", "Item", 0));

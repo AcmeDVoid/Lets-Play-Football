@@ -9,9 +9,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-//    QWidget* widget = new QWidget(MainWindow);
-//    widget->setLayout(gridLayout);
-//    MainWindow->setCentralWidget(widget);
 }
 
 MainWindow::~MainWindow()
@@ -45,6 +42,13 @@ void MainWindow::on_pushButton_4_clicked()
     StadiumNode *iterator;
     iterator = aMap.begin();
 
+    // Clear row before getting new information
+    for (int i = 0; i < aMap.size(); i++)
+    {
+        ui->tableWidget->removeRow(0);
+    }
+
+    // Get new infomation into the tableWidget
     for (int i = 0; i < aMap.size(); i++)
     {
         ui->tableWidget->insertRow(i);
@@ -55,7 +59,7 @@ void MainWindow::on_pushButton_4_clicked()
         ui->tableWidget->setItem(i,4,new QTableWidgetItem(iterator->value.getConference()));
         ui->tableWidget->setItem(i,5,new QTableWidgetItem(iterator->value.getSurfaceType()));
         ui->tableWidget->setItem(i,6,new QTableWidgetItem(iterator->value.getSurfaceType()));
-        ui->tableWidget->setItem(i,7,new QTableWidgetItem(iterator->value.getRootType()));
+        ui->tableWidget->setItem(i,7,new QTableWidgetItem(iterator->value.getRoofType()));
         ui->tableWidget->setItem(i,7,new QTableWidgetItem(iterator->value.getStarPlayer()));
         iterator = iterator->next;
     }

@@ -286,32 +286,60 @@ StadiumNode* StadiumList::end() const
     return tail;
 }
 
-
-void StadiumList::print() const
+void StadiumList::getAllStadiums(QVector <Stadium> &valueList) const
 {
+    for(StadiumNode *tempPtr = head; tempPtr != NULL; tempPtr = tempPtr->next)
+    {
+        valueList.push_back(tempPtr->value);
+    }
+}
+
+double StadiumList::getTotalSeatingCapacity() const
+{
+    double accumulator = 0;
+
     StadiumNode *tempPtr;
 
-    if (head != NULL)
+    tempPtr = head;
+
+    qDebug() << "accumulator = " + QString::number(accumulator);
+
+    while (tempPtr != NULL)
     {
-        tempPtr = head;
-
-        qDebug() << "key" << " | " << "team name | stadium name"
-                    << " | Seating Capacity | Location | Conference "
-                    << "| Surface Type | Stadium Roof Type | Star Player";
-
-        while (tempPtr != NULL)
-        {
-            qDebug() << tempPtr->key << " |||| " << tempPtr->value.getTeamName()
-                     << " | " << tempPtr->value.getStadiumName() << " | "
-                     << tempPtr->value.getSeatingCapacity() << " | "
-                     << tempPtr->value.getLocation() << " | "
-                     << tempPtr->value.getConference() << " | "
-                     << tempPtr->value.getSurfaceType() << " | "
-                     << tempPtr->value.getRootType() << " | "
-                     << tempPtr->value.getStarPlayer();
-
-            tempPtr = tempPtr->next;
-        }
+        accumulator += tempPtr->value.getSeatingCapacity();
+        qDebug() << "accumulator = accumulator + " << tempPtr->value.getSeatingCapacity();
+        tempPtr = tempPtr->next;
     }
 
+    qDebug() << accumulator;
+
+    return accumulator;
 }
+
+//void StadiumList::print() const
+//{
+//    StadiumNode *tempPtr;
+
+//    if (head != NULL)
+//    {
+//        tempPtr = head;
+
+//        qDebug() << "key" << " | " << "team name | stadium name"
+//                    << " | Seating Capacity | Location | Conference "
+//                    << "| Surface Type | Stadium Roof Type | Star Player";
+
+//        while (tempPtr != NULL)
+//        {
+//            qDebug() << tempPtr->key << " |||| " << tempPtr->value.getTeamName()
+//                     << " | " << tempPtr->value.getStadiumName() << " | "
+//                     << tempPtr->value.getSeatingCapacity() << " | "
+//                     << tempPtr->value.getLocation() << " | "
+//                     << tempPtr->value.getConference() << " | "
+//                     << tempPtr->value.getSurfaceType() << " | "
+//                     << tempPtr->value.getRootType() << " | "
+//                     << tempPtr->value.getStarPlayer();
+
+//            tempPtr = tempPtr->next;
+//        }
+//    }
+//}
