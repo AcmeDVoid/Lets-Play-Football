@@ -41,7 +41,7 @@ void ReadFromFile(QString fileName, StadiumList &aMap)
             // Read seating capacity and clear buffer after that
             in >> readDouble;
             aStadiumNote.value.setSeatingCapacity(readDouble);
-            in.readLine();
+            in.readLine();      // Clear the input buffer by reading line
 
 
             // Read location

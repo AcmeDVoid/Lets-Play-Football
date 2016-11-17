@@ -6,12 +6,16 @@
 class SortedLists
 {
     private:
-        StadiumList myMap;
-        QVector<Stadium> mySortedList;
+        StadiumList myMap;                  // The map
+        QVector<Stadium> myStadiumList;      // List of stadium
 
     public:
+        // Default constructor
+        // This contructor instantiates an object
         SortedLists();
 
+        // Destructor
+        // This destructor terminates the object when out of scope
         ~SortedLists();
 
         // byTeamName method
@@ -49,8 +53,12 @@ class SortedLists
          * their corresponding location sorted by seating capacity. */
         QVector<Stadium> AllbySeatCap2();
 
+        // GetStadiumList method
+        // This method return the lists of stadiums
         QVector<Stadium> GetStadiumList() const;
 
+        // isEmpty method
+        // This methods check if the list is empty
         bool isEmpty() const;
 
 };
