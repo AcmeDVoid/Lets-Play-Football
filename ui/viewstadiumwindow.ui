@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ViewStadiumWindow</class>
+ <widget class="QDialog" name="ViewStadiumWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>661</width>
+    <height>645</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>View Stadiums</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../assets/img.qrc">
+    <normaloff>:/nfl icon.png</normaloff>:/nfl icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>371</width>
+     <height>621</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="vlTeamBase"/>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>10</y>
+     <width>261</width>
+     <height>621</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="vlSorts"/>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../assets/img.qrc"/>
+ </resources>
+ <connections/>
+</ui>

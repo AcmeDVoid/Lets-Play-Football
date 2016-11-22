@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+      <file>nfl icon.png</file>
+ <file>plan_a_trip.png</file>   <file>graphic.png</file>  <file>admin.png</file>
+ 	<file>main.jpg</file>
+   <file>logo.jpg</file>
+ <file>logo.png</file> 	<file>map.jpg</file>    
+    </qresource>
+</RCC>
