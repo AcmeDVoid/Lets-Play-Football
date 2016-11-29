@@ -34,7 +34,7 @@ addstadium::addstadium(StadiumList* masterList, QWidget *parent) :
     ui->zip->setValidator(new QRegExpValidator(QRegExp("(^\\d{5}(?:[-\\s]\\d{4})?$)")));
     ui->phoneNumber->setValidator(new QRegExpValidator(QRegExp("[\\d-()]{1,}")));
 
-    for (int i = 0; i < masterList->size(); i++) {
+    for (unsigned int i = 0; i < masterList->size(); i++) {
 //        ui->comboBoxEdge->addItem(QString::fromStdString(masterList->graph()->vertices().at(i)->name()));
         edgeLengths.push_back(0);
     }

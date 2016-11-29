@@ -34,6 +34,8 @@ private slots:
     void on_buttonViewStadiums_clicked();
 
 
+    void on_buttonViewTeams_clicked();
+
 private:
     Ui::MainWindow *ui;
     StadiumList *stadiumList;   /// a reference to the master stadium list
