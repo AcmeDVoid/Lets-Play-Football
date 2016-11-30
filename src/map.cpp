@@ -1,113 +1,144 @@
-//#include "include/map.h"
+#include "include/map.h"
 
-//#include "StadiumList.h"
-
-//// Default constructor
-//// This constructor instantiates an object
-//Map::Map()
-//{
-//    // Initialize all property
-//    head = NULL;
-//    tail = NULL;
-//    tail = head;
-//    mapSize = 0;
-//}
-
-//// Destructor
-//// This destructor terminates the object when out of scope
-//Map::~Map()
-//{
-
-//    StadiumNode *delPtr;
-
-//    // Check if the list is not empty
-//    if (head !=NULL)
-//    {
-//        while (delPtr != NULL)
-//        {
-//            delPtr = head;
-
-//            head->next = head;
-//            head->prev = NULL;
-//            delete delPtr;
-//            delPtr = NULL;
-//            mapSize--;
-//        }
-
-//        // Once the deletion is complete, set tail and head to NULL;
-//        tail = NULL;
-//        head = NULL;
-//    }
-//}
-
-//// size method
-//// This methods return the size of the map
-//int Map::size() const
-//{
-//    // return the size
-//    return mapSize;
-//}
-
-//// empty method
-//// This method returns a bool type if the map is empty or not
-//bool Map::empty() const
-//{
-//    // Check if the list is empty
-//    if(head == NULL)
-//    {
-//        // If yes, return true
-//        return true;
-//    }
-//    //If not, return false
-//    else
-//    {
-//        return false;
-//    }
-//}
-
-//// find method
-//// This method finds return the Node based on the key of that Node
-//StadiumNode* Map::find(QString aKey)
-//{
-//    StadiumNode *findPtr;
-//    findPtr = head;
-//    bool check = false;
-
-//    // Check if the list is empty
-//    if (head == NULL)
-//    {
-//        return NULL;
-//    }
-//    // If not, find the key
-//    else
-//    {
-//        while(!check && findPtr != NULL)
-//        {
-//            if (findPtr->key == aKey)
-//            {
-//                check = true;
-//            }
-//            else
-//            {
-//                findPtr = findPtr->next;
-//            }
-//        }
-//    }
-
-//    // Check if the searching is success
-//    if (check)
-//    {
-//        // If yes, return that pointer
-//        return findPtr;
-//    }
-//    else
-//    {
-//        // If not, return NULL
-//        return NULL;
-//    }
+#include "StadiumList.h"
 
 
-//}
+/*!
+ * \brief size
+ * \return return the size of the map
+ */
+int Map::size() const
+{
+    // return the size
+    return mapSize;
+}
+
+
+/*!
+ * \brief empty
+ * \return a bool type if the map is empty or not
+ */
+bool Map::empty() const
+{
+    // Check if the list is empty
+    if(head == NULL)
+    {
+        // If yes, return true
+        return true;
+    }
+    //If not, return false
+    else
+    {
+        return false;
+    }
+}
+
+/*!
+ * \brief Map - Default constructor
+ * This constructor instantiates an object
+ */
+Map::Map()
+{
+    // Initialize all property
+    head = NULL;
+    tail = NULL;
+    tail = head;
+    mapSize = 0;
+}
+
+/*!
+ * \brief Map - Destructor
+ * This destructor terminates the object when out of scope
+ */
+Map::~Map()
+{
+
+    StadiumNode *delPtr;
+
+    // Check if the list is not empty
+    if (head !=NULL)
+    {
+        while (delPtr != NULL)
+        {
+            delPtr = head;
+
+            head->next = head;
+            head->prev = NULL;
+//          delete delPtr;
+            delPtr = NULL;
+            mapSize--;
+        }
+
+        // Once the deletion is complete, set tail and head to NULL;
+        tail = NULL;
+        head = NULL;
+    }
+}
+
+/*!
+ * \brief find
+ * \param aKey - key of the pair from the StadiumNode
+ * \return Node based on the key of that Node
+ */
+StadiumNode* Map::find(QString aKey)
+{
+    StadiumNode *findPtr;
+    findPtr = head;
+    bool check = false;
+
+    // Check if the list is empty
+    if (head == NULL)
+    {
+        return NULL;
+    }
+    // If not, find the key
+    else
+    {
+        while(!check && findPtr != NULL)
+        {
+            if (findPtr->key == aKey)
+            {
+                check = true;
+            }
+            else
+            {
+                findPtr = findPtr->next;
+            }
+        }
+    }
+
+    // Check if the searching is success
+    if (check)
+    {
+        // If yes, return that pointer
+        return findPtr;
+    }
+    else
+    {
+        // If not, return NULL
+        return NULL;
+    }
+
+
+}
+
+/*!
+ * \brief begin
+ * \return the first Node of the map
+ */
+StadiumNode* Map::begin() const
+{
+    return head;
+}
+
+/*!
+ * \brief end
+ * \return the last Node of the map
+ */
+StadiumNode* Map::end() const
+{
+    return tail;
+}
 
 //// Helper function - insert
 //// This function inserts a Node into the doubly linked list
@@ -294,20 +325,6 @@
 //    {\
 //        // Output error
 //    }
-//}
-
-//// begin method
-//// This methods returns the first Node of the map
-//StadiumNode* Map::begin() const
-//{
-//    return head;
-//}
-
-//// end method
-//// This method returns the last Node of the map
-//StadiumNode* Map::end() const
-//{
-//    return tail;
 //}
 
 //// getAllStadiums method
