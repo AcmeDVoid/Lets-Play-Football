@@ -93,6 +93,7 @@ void ViewStadiumWindow::renderStadiumList()
     // clear the view displaying the stadium list
     stadiumListBrowser->clear();
 
+    int totalCapacity = 0;
     // for every stadium
     for (unsigned int i = 0; i < stadiumList->size(); i++) {
         Stadium *currentStadium = stadiumList->stadium(i);
@@ -117,6 +118,8 @@ void ViewStadiumWindow::renderStadiumList()
             continue;
         }
 
+        totalCapacity += currentStadium->capacity();
+
         QStringList detailList;
         // build the qstring list of stadium attributes to display
         detailList << QString::fromStdString("Stadium Name: " + currentStadium->name());
@@ -129,13 +132,16 @@ void ViewStadiumWindow::renderStadiumList()
         detailList << QString::fromStdString("Surface type  : " + currentStadium->surface());
         detailList << QString::fromStdString("Roof type       : " + currentStadium->typology());
 
+
         // add all strings in the list to the display
         for (int j = 0; j < detailList.size(); j++) {
             QString currentDetail = detailList[j];
             stadiumListBrowser->append(currentDetail);
+
         }
         stadiumListBrowser->append("");
     }
+    QMessageBox::information(this,"Seating Capacity","Total seating capacity of all stadiums is " + QString::fromStdString(to_string(totalCapacity)),"OK");
 }
 
 void ViewStadiumWindow::onCheckBoxClick(bool)

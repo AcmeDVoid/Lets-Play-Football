@@ -10,6 +10,7 @@
 #include <QPushButton>
 #include <QLabel>
 #include <QTextBrowser>
+#include <QMessageBox>
 #include "include/stadiumlist.h"
 #include "include/stadium.h"
 
