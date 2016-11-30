@@ -34,7 +34,7 @@ QGroupBox *ViewStadiumWindow::createSortRadioButtonGroupBox()
 {
     QStringList sortNames;
     // list of sort types
-    sortNames << "Stadium Name" << "Team Name" << "Player Name"
+    sortNames << "Stadium Name" << "Team Name" << "Player Name(WIP)"
               << "Seating Capacity" << "Surface" << "Roof Type";
 
     QGroupBox *groupBox = new QGroupBox(tr("Sort"));
@@ -58,7 +58,7 @@ QGroupBox *ViewStadiumWindow::createFilterCheckBoxGroupBox()
 {
     QStringList filterNames;
     // list of possible filters
-    filterNames << "American League Stadiums" << "National League Stadiums" << "Synthetic Surface Stadiums"
+    filterNames << "American Football Conference" << "National Football Conference" << "Synthetic Surface Stadiums"
                 << "Grass Surface Stadiums";
 
     // label group filters
@@ -93,6 +93,7 @@ void ViewStadiumWindow::renderStadiumList()
     // clear the view displaying the stadium list
     stadiumListBrowser->clear();
 
+    int totalCapacity = 0;
     // for every stadium
     for (unsigned int i = 0; i < stadiumList->size(); i++) {
         Stadium *currentStadium = stadiumList->stadium(i);
@@ -117,25 +118,30 @@ void ViewStadiumWindow::renderStadiumList()
             continue;
         }
 
+        totalCapacity += currentStadium->capacity();
+
         QStringList detailList;
         // build the qstring list of stadium attributes to display
         detailList << QString::fromStdString("Stadium Name: " + currentStadium->name());
-        detailList << QString::fromStdString("Team Name: " + currentStadium->team());
-        detailList << QString::fromStdString("Address: " + currentStadium->streetAddress() + ", " + currentStadium->cityStateZip());
+        detailList << QString::fromStdString("Team Name    : " + currentStadium->team());
+        detailList << QString::fromStdString("Address          : " + currentStadium->streetAddress() + ", " + currentStadium->cityStateZip());
         detailList << QString::fromStdString("Phone Number: " + currentStadium->phoneNumber());
-        detailList << QString::fromStdString("League: " + currentStadium->type());
-        detailList << QString::fromStdString("Date Opened: " + currentStadium->dateOpened().DisplayDate());
-        detailList << "Capacity: " + QString::number(currentStadium->capacity());
-        detailList << QString::fromStdString("Surface: " + currentStadium->surface());
-        detailList << QString::fromStdString("Typology: " + currentStadium->typology());
+        detailList << QString::fromStdString("Conference     : " + currentStadium->type());
+        detailList << QString::fromStdString("Date Opened  : " + currentStadium->dateOpened().DisplayDate());
+        detailList << "Capacity         : " + QString::number(currentStadium->capacity());
+        detailList << QString::fromStdString("Surface type  : " + currentStadium->surface());
+        detailList << QString::fromStdString("Roof type       : " + currentStadium->typology());
+
 
         // add all strings in the list to the display
         for (int j = 0; j < detailList.size(); j++) {
             QString currentDetail = detailList[j];
             stadiumListBrowser->append(currentDetail);
+
         }
         stadiumListBrowser->append("");
     }
+    QMessageBox::information(this,"Seating Capacity","Total seating capacity of all stadiums is " + QString::fromStdString(to_string(totalCapacity)),"OK");
 }
 
 void ViewStadiumWindow::onCheckBoxClick(bool)
@@ -182,7 +188,7 @@ void ViewStadiumWindow::onRadioButtonClick(bool)
     else if (radioButton->text() == "Surface") {
         stadiumList->sortByGrassSurface();
     }
-    else if (radioButton->text() == "Typology") {
+    else if (radioButton->text() == "Roof Type") {
         stadiumList->sortByParkTypology();
     }
 
