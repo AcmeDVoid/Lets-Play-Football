@@ -23,6 +23,7 @@ INPUT(
 ./release\modifystadium.o
 ./release\modifystadiumselector.o
 ./release\viewteamwindow.o
+./release\map.o
 ./release\qrc_img.o
 ./release\moc_mainwindow.o
 ./release\moc_splashscreen.o

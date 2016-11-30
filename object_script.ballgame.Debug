@@ -23,6 +23,7 @@ INPUT(
 ./debug\modifystadium.o
 ./debug\modifystadiumselector.o
 ./debug\viewteamwindow.o
+./debug\map.o
 ./debug\qrc_img.o
 ./debug\moc_mainwindow.o
 ./debug\moc_splashscreen.o

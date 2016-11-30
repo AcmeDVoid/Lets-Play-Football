@@ -34,7 +34,7 @@ QGroupBox *ViewStadiumWindow::createSortRadioButtonGroupBox()
 {
     QStringList sortNames;
     // list of sort types
-    sortNames << "Stadium Name" << "Team Name" << "Player Name"
+    sortNames << "Stadium Name" << "Team Name" << "Player Name(WIP)"
               << "Seating Capacity" << "Surface" << "Roof Type";
 
     QGroupBox *groupBox = new QGroupBox(tr("Sort"));
@@ -182,7 +182,7 @@ void ViewStadiumWindow::onRadioButtonClick(bool)
     else if (radioButton->text() == "Surface") {
         stadiumList->sortByGrassSurface();
     }
-    else if (radioButton->text() == "Typology") {
+    else if (radioButton->text() == "Roof Type") {
         stadiumList->sortByParkTypology();
     }
 

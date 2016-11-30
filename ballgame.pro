@@ -38,7 +38,8 @@ SOURCES += src/main.cpp\
     src/viewrevenue.cpp \
     src/modifystadium.cpp \
     src/modifystadiumselector.cpp \
-    src/viewteamwindow.cpp
+    src/viewteamwindow.cpp \
+    src/map.cpp
 
 
 HEADERS  += include/mainwindow.h \
@@ -59,7 +60,9 @@ HEADERS  += include/mainwindow.h \
     include/viewrevenue.h \
     include/modifystadium.h \
     include/modifystadiumselector.h \
-    include/viewteamwindow.h
+    include/viewteamwindow.h \
+    include/stadiumnode.h \
+    include/map.h
 
 FORMS    += ui/mainwindow.ui \
             ui/splashscreen.ui \
