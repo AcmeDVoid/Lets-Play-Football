@@ -58,7 +58,7 @@ QGroupBox *ViewStadiumWindow::createFilterCheckBoxGroupBox()
 {
     QStringList filterNames;
     // list of possible filters
-    filterNames << "American League Stadiums" << "National League Stadiums" << "Synthetic Surface Stadiums"
+    filterNames << "American Football Conference" << "National Football Conference" << "Synthetic Surface Stadiums"
                 << "Grass Surface Stadiums";
 
     // label group filters
@@ -120,14 +120,14 @@ void ViewStadiumWindow::renderStadiumList()
         QStringList detailList;
         // build the qstring list of stadium attributes to display
         detailList << QString::fromStdString("Stadium Name: " + currentStadium->name());
-        detailList << QString::fromStdString("Team Name: " + currentStadium->team());
-        detailList << QString::fromStdString("Address: " + currentStadium->streetAddress() + ", " + currentStadium->cityStateZip());
+        detailList << QString::fromStdString("Team Name    : " + currentStadium->team());
+        detailList << QString::fromStdString("Address          : " + currentStadium->streetAddress() + ", " + currentStadium->cityStateZip());
         detailList << QString::fromStdString("Phone Number: " + currentStadium->phoneNumber());
-        detailList << QString::fromStdString("League: " + currentStadium->type());
-        detailList << QString::fromStdString("Date Opened: " + currentStadium->dateOpened().DisplayDate());
-        detailList << "Capacity: " + QString::number(currentStadium->capacity());
-        detailList << QString::fromStdString("Surface: " + currentStadium->surface());
-        detailList << QString::fromStdString("Typology: " + currentStadium->typology());
+        detailList << QString::fromStdString("Conference     : " + currentStadium->type());
+        detailList << QString::fromStdString("Date Opened  : " + currentStadium->dateOpened().DisplayDate());
+        detailList << "Capacity         : " + QString::number(currentStadium->capacity());
+        detailList << QString::fromStdString("Surface type  : " + currentStadium->surface());
+        detailList << QString::fromStdString("Roof type       : " + currentStadium->typology());
 
         // add all strings in the list to the display
         for (int j = 0; j < detailList.size(); j++) {
