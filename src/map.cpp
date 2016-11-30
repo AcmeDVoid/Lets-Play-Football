@@ -1,6 +1,5 @@
 #include "include/map.h"
 
-#include "StadiumList.h"
 
 
 /*!
