@@ -1,7 +1,7 @@
 
 # TheBrogrammer 
 
-[![Build Status](https://travis-ci.com/AcmeDVoid/TheBrogrammer.svg?token=u2SJCaqsHMs5vGCjvbZp&branch=masterr)](https://github.com/AcmeDVoid/TheBrogrammer)
+[![Build Status](https://travis-ci.com/AcmeDVoid/TheBrogrammer.svg?token=u2SJCaqsHMs5vGCjvbZp&branch=master)](https://github.com/AcmeDVoid/TheBrogrammer)
 
 
 CS1D Final Project
