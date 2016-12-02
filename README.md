@@ -1,5 +1,9 @@
 
-# TheBrogrammer <a href = "https://travis-ci.com/AcmeDVoid/TheBrogrammer"> <img src="https://travis-ci.com/AcmeDVoid/TheBrogrammer.svg?token=u2SJCaqsHMs5vGCjvbZp&branch=master"> </a>
+# TheBrogrammer 
+
+[![Build Status](https://travis-ci.com/AcmeDVoid/FastFoodFantasy.svg?token=u2SJCaqsHMs5vGCjvbZp&branch=master)](https://github.com/AcmeDVoid/TheBrogrammer)
+
+
 CS1D Final Project
 
 
