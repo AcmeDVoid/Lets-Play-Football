@@ -50,8 +50,8 @@ private:
      * button filters and checkbox sorts
      */
     void renderStadiumList();
-    bool displayGrassSurfaces;
-    bool displayAstroturfSurfaces;
+//    bool displayGrassSurfaces;
+//    bool displayAstroturfSurfaces;
     bool displayNationalLeague;
     bool displayAmericanLeague;
 
