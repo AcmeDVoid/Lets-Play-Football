@@ -9,8 +9,8 @@ ViewStadiumWindow::ViewStadiumWindow(StadiumList *sList, QWidget *parent) :
 
     // default values of what to display
     stadiumList = sList;
-    displayGrassSurfaces = true;
-    displayAstroturfSurfaces = true;
+//    displayGrassSurfaces = true;
+//    displayAstroturfSurfaces = true;
     displayNationalLeague = true;
     displayAmericanLeague = true;
 
@@ -58,8 +58,7 @@ QGroupBox *ViewStadiumWindow::createFilterCheckBoxGroupBox()
 {
     QStringList filterNames;
     // list of possible filters
-    filterNames << "American Football Conference" << "National Football Conference" << "Synthetic Surface Stadiums"
-                << "Grass Surface Stadiums";
+    filterNames << "American Football Conference" << "National Football Conference";
 
     // label group filters
     QGroupBox *groupBox = new QGroupBox(tr("Filter"));
@@ -98,15 +97,15 @@ void ViewStadiumWindow::renderStadiumList()
     for (unsigned int i = 0; i < stadiumList->size(); i++) {
         Stadium *currentStadium = stadiumList->stadium(i);
 
-        // if the stadium has grass surface and grass is filtered out continue
-        if (!displayGrassSurfaces && currentStadium->surface() == "Grass") {
-            continue;
-        }
+//        // if the stadium has grass surface and grass is filtered out continue
+//        if (!displayGrassSurfaces && currentStadium->surface() == "Grass") {
+//            continue;
+//        }
 
-        // if the stadium has astro turf surface and it is filtered out continue
-        if (!displayAstroturfSurfaces && currentStadium->surface() == "Astro turf") {
-            continue;
-        }
+//        // if the stadium has astro turf surface and it is filtered out continue
+//        if (!displayAstroturfSurfaces && currentStadium->surface() == "Astro turf") {
+//            continue;
+//        }
 
         // if the stadium is national and its filtered out continue
         if (!displayNationalLeague && currentStadium->type() == "National") {
@@ -156,12 +155,12 @@ void ViewStadiumWindow::onCheckBoxClick(bool)
     else if (checkBox->text() == "National League Stadiums") {
         displayNationalLeague = checkBox->isChecked();
     }
-    else if (checkBox->text() == "Astro turf Surface Stadiums") {
-        displayAstroturfSurfaces = checkBox->isChecked();
-    }
-    else if (checkBox->text() == "Grass Surface Stadiums") {
-        displayGrassSurfaces = checkBox->isChecked();
-    }
+//    else if (checkBox->text() == "Astro turf Surface Stadiums") {
+//        displayAstroturfSurfaces = checkBox->isChecked();
+//    }
+//    else if (checkBox->text() == "Grass Surface Stadiums") {
+//        displayGrassSurfaces = checkBox->isChecked();
+//    }
 
     // redisplay the stadium list
     renderStadiumList();
