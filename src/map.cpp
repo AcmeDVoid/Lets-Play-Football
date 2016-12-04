@@ -321,7 +321,7 @@ StadiumNode* Map::end() const
 //    }
 //    // If not, output error
 //    else
-//    {\
+//    {
 //        // Output error
 //    }
 //}

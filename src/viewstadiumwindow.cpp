@@ -140,7 +140,7 @@ void ViewStadiumWindow::renderStadiumList()
         }
         stadiumListBrowser->append("");
     }
-    QMessageBox::information(this,"Seating Capacity","Total seating capacity of all stadiums is " + QString::fromStdString(to_string(totalCapacity)),"OK");
+    QMessageBox::information(this,"Seating Capacity","Total seating capacity of all stadiums is " + QString::number(totalCapacity),"OK");
 }
 
 void ViewStadiumWindow::onCheckBoxClick(bool)
