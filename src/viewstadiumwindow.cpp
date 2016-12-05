@@ -13,6 +13,7 @@ ViewStadiumWindow::ViewStadiumWindow(StadiumList *sList, QWidget *parent) :
 //    displayAstroturfSurfaces = true;
     displayNationalLeague = true;
     displayAmericanLeague = true;
+    displayOpenStadiumRoofType = true;
 
     // add group boxes of radio buttons and checkboxes to the layout
     ui->vlSorts->addWidget(createSortRadioButtonGroupBox());
@@ -34,7 +35,7 @@ QGroupBox *ViewStadiumWindow::createSortRadioButtonGroupBox()
 {
     QStringList sortNames;
     // list of sort types
-    sortNames << "Stadium Name" << "Team Name" << "Player Name(WIP)"
+    sortNames << "Stadium Name" << "Team Name" << "Player Name"
               << "Seating Capacity" << "Surface" << "Roof Type";
 
     QGroupBox *groupBox = new QGroupBox(tr("Sort"));
@@ -58,7 +59,8 @@ QGroupBox *ViewStadiumWindow::createFilterCheckBoxGroupBox()
 {
     QStringList filterNames;
     // list of possible filters
-    filterNames << "American Football Conference" << "National Football Conference";
+    filterNames << "American Football Conference" << "National Football Conference"
+                << "\'Open\' Stadium Roof Type";
 
     // label group filters
     QGroupBox *groupBox = new QGroupBox(tr("Filter"));
@@ -116,6 +118,10 @@ void ViewStadiumWindow::renderStadiumList()
         if (!displayAmericanLeague && currentStadium->type() == "American") {
             continue;
         }
+        // if the stadium roof type is open and its filtered out continue
+        if (displayOpenStadiumRoofType && currentStadium->typology() == "Open") {
+            continue;
+        }
 
         totalCapacity += currentStadium->capacity();
 
@@ -123,8 +129,8 @@ void ViewStadiumWindow::renderStadiumList()
         // build the qstring list of stadium attributes to display
         detailList << QString::fromStdString("Stadium Name: " + currentStadium->name());
         detailList << QString::fromStdString("Team Name    : " + currentStadium->team());
-        detailList << QString::fromStdString("Star Player: " + currentStadium->getStarPlayer());
-        detailList << QString::fromStdString("Address          : " + currentStadium->streetAddress() + ", " + currentStadium->cityStateZip());
+        detailList << QString::fromStdString("Star Player     : " + currentStadium->getStarPlayer());
+        detailList << QString::fromStdString("Address          : " +  currentStadium->cityStateZip());
         detailList << QString::fromStdString("Phone Number: " + currentStadium->phoneNumber());
         detailList << QString::fromStdString("Conference     : " + currentStadium->type());
         detailList << QString::fromStdString("Date Opened  : " + currentStadium->dateOpened().DisplayDate());
@@ -155,6 +161,9 @@ void ViewStadiumWindow::onCheckBoxClick(bool)
     }
     else if (checkBox->text() == "National League Stadiums") {
         displayNationalLeague = checkBox->isChecked();
+    }
+    else if (checkBox->text() == "\'Open\' Stadium Roof Type") {
+        displayOpenStadiumRoofType = checkBox->isChecked();
     }
 //    else if (checkBox->text() == "Astro turf Surface Stadiums") {
 //        displayAstroturfSurfaces = checkBox->isChecked();
@@ -190,6 +199,9 @@ void ViewStadiumWindow::onRadioButtonClick(bool)
     }
     else if (radioButton->text() == "Roof Type") {
         stadiumList->sortByParkTypology();
+    }
+    else if (radioButton->text() == "Player Name") {
+        stadiumList->sortByStarPlayer();
     }
 
     // redisplay stadium list
