@@ -36,13 +36,13 @@ Open
 
 CenturyLink Field
 Seattle Seahawks
-Russel Wilson
-CenturyLink Field's Address
-Seattle, Washington
+Russel Wilsonn
+CenturyLink Field's Address Seattle, Washington Seattle Seattle  
+Seattle,   
 (123) 456-7890
 1 1 2000
 68000
-FieldTurf Revolution
+FieldTurf Revolution
 National
 Open
 
@@ -85,36 +85,36 @@ Open
 Ford Field
 Detroit Lions
 Matt Stafford
-Ford Field's Address
-Detroit, Michigan
+Ford Field's Address Detroit, Michigan
+Detroit,   
 (123) 456-7890
 1 1 2000
 65000
-FieldTurf Classic HD
+FieldTurf Classic HD
 National
 Fixed
 
 Georgia Dome
 Atlanta Falcons
 Julio Jones
-Georgia Dome's Address
-Atlanta, Georgia
+Georgia Dome's Address Atlanta, Georgia
+Atlanta,   
 (123) 456-7890
 1 1 2000
 71250
-FieldTurf Classic HD
+FieldTurf Classic HD
 National
 Fixed
 
 Gillette Stadium
 New England Patriots
 Tom Brady
-Gillette Stadium's Address
-Foxborough, Massachusetts
+Gillette Stadium's Address Foxborough, Massachusetts
+Foxborough,   
 (123) 456-7890
 1 1 2000
 66829
-FieldTurf Revolution
+FieldTurf Revolution
 American
 Open
 
@@ -145,24 +145,24 @@ Open
 Lambeau Field
 Green Bay Packers
 Aaron Rodgers
-Lambeau Field's Address
-Green Bay, Wisconsin
+Lambeau Field's Address Green Bay, Wisconsin
+Green Bay,   
 (123) 456-7890
 1 1 2000
 81435
-Hybrid Grass-Synthetic
+Hybrid Grass-Synthetic
 National
 Open
 
 Levi's Stadium
 San Francisco 49ers
 Navarro Bowman
-Levi's Stadium's Address
-Santa Clara, California
+Levi's Stadium's Address Santa Clara, California
+Santa Clara,   
 (123) 456-7890
 1 1 2000
 68500
-Tifway II Bermuda Grass / Perennial Ryegrass mixture
+Tifway II Bermuda Grass/Perennial Ryegrass mixture
 National
 Open
 
@@ -193,12 +193,12 @@ Open
 Lucas Oil Stadium
 Indianapolis Colts
 Andrew Luck
-Lucas Oil Stadium's Address
-Indianapolis, Indiana
+Lucas Oil Stadium's Address Indianapolis, Indiana
+Indianapolis,   
 (123) 456-7890
 1 1 2000
 67000
-FieldTurf Classic HD
+FieldTurf Classic HD
 American
 Retractable
 

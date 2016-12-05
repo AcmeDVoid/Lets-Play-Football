@@ -55,6 +55,7 @@ void modifyStadium::loadDefaults(){
     int seatingCapacityFormData = thisStadium->capacity();
     QString leagueTypeFormData  = QString::fromStdString(thisStadium->league());
     QString surfaceTypeFormData = QString::fromStdString(thisStadium->surface());
+    QString starPlayerFormData = QString::fromStdString(thisStadium->getStarPlayer());
 
     //parse city, state and zip -> ex: Detroit, MI 48201
     std::stringstream ss(thisStadium->cityStateZip());
@@ -80,7 +81,7 @@ void modifyStadium::loadDefaults(){
     //set text on the ui
     ui->stadiumName->setText(stadiumNameFormData);
     ui->teamName->setText(teamNameFormData);
-    ui->stadiumTypology->setText(typologyFormData);
+    ui->stadiumTypology->setText(surfaceTypeFormData);
     ui->dateOpened->setDate(dateOpenedFormData);
     ui->capacity->setValue(seatingCapacityFormData);
     ui->city->setText(cityFormData);
@@ -88,6 +89,7 @@ void modifyStadium::loadDefaults(){
     ui->zip->setText(zipCodeFormData);
     ui->address->setText(streetAddressFormData);
     ui->phoneNumber->setText(phoneNumberFormData);
+    ui->starPlayer->setText(starPlayerFormData);
 
 
     //league types
@@ -101,13 +103,21 @@ void modifyStadium::loadDefaults(){
     }
 
     //surface types
-    if(surfaceTypeFormData == "Grass"){
+    if(typologyFormData == "Open"){
         ui->grassRadioButton->setChecked(true);
         ui->astroTurfRadioButton->setChecked(false);
+        ui->radioRetrackableButton->setChecked(false);
     }
-    else{
+    else if(typologyFormData == "Fixed"){
         ui->grassRadioButton->setChecked(false);
         ui->astroTurfRadioButton->setChecked(true);
+        ui->radioRetrackableButton->setChecked(false);
+    }
+    else
+    {
+        ui->grassRadioButton->setChecked(false);
+        ui->astroTurfRadioButton->setChecked(false);
+        ui->radioRetrackableButton->setChecked(true);
     }
 }
 
@@ -251,6 +261,8 @@ void modifyStadium::on_updateStadiumButton_clicked()
         {
             roofType = "Retractable";
         }
+
+        ui->zip->setValidator(new QRegExpValidator(QRegExp("(^\\d{5}(?:[-\\s]\\d{4})?$)")));
 
         //update the vertex's name
 //        this->stadiumVertex->setName(ui->stadiumName->text().toStdString());
