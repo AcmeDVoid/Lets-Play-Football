@@ -54,6 +54,7 @@ private:
 //    bool displayAstroturfSurfaces;
     bool displayNationalLeague;
     bool displayAmericanLeague;
+    bool displayOpenStadiumRoofType;
 
 private slots:
     /**

@@ -395,6 +395,9 @@ bool SeatingCapacityCompare(const Stadium stadium1, const Stadium stadium2) {
 bool TypologyCompare(const Stadium stadium1, const Stadium stadium2) {
     return ((stadium1.typology()) < (stadium2.typology()));
 }
+bool StarPlayerCompare(const Stadium stadium1, const Stadium stadium2){
+    return ((stadium1.getStarPlayer()) < (stadium2.getStarPlayer()));
+}
 bool DateOpenedCompare(const Stadium stadium1, const Stadium stadium2) {
     //year1 < year2 ?
     if( stadium1.dateOpened().GetYear() < stadium2.dateOpened().GetYear() ){
@@ -458,5 +461,7 @@ void StadiumList::sortBySeatingCapacity() {
 void StadiumList::sortByParkTypology() {
     std::sort(stadiumList.begin(), stadiumList.end(), TypologyCompare);
 }
-
-
+void StadiumList::sortByStarPlayer()
+{
+    std::sort(stadiumList.begin(), stadiumList.end(), StarPlayerCompare);
+}
