@@ -29,7 +29,7 @@ void StadiumList::initialize()
 
         // load souvenirs if save data exists
         if (InFileExistsAndIsNotEmpty("data/SavedSouvenirs.txt")) {
-//            loadSouvenirs("data/SavedSouvenirs.txt");
+            loadSouvenirs("data/SavedSouvenirs.txt");
         }
 
         // load revenue if save data exists
@@ -137,10 +137,9 @@ void StadiumList::loadSouvenirs(string filename)
     // open file
     inFile.open(filename.c_str());
 
-    int i = 0;
+
     // while in the file
     while (!inFile.eof()) {
-        qDebug() << QString::fromStdString(std::to_string(++i)) + "\Inside";
         Stadium *currentStadium = stadium(currentStadiumIndex);
         inFile >> souvenirCount;
 
