@@ -17,9 +17,15 @@ public:
     explicit ViewTeamWindow(StadiumList *sList, QWidget *parent = 0);
     ~ViewTeamWindow();
 
+private slots:
+    void on_checkBox_AFC_clicked();
+
+    void on_checkBox_NFC_clicked();
+
 private:
     Ui::ViewTeamWindow *ui;
     StadiumList *stadiumList;
+    void renderTeamList();
 };
 
 #endif // VIEWTEAMWINDOW_H
