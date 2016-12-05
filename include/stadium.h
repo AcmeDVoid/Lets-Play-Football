@@ -174,6 +174,7 @@ public:
     void updateStadium(std::string newStadiumName,
                        std::string newTeamName,
                        std::string newTypology,
+                       std::string newStarPlayer,
                        Date newDateOpened,
                        int newStadiumCapacity,
                        std::string newLeagueType,

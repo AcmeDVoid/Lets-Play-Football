@@ -93,7 +93,7 @@ void StadiumList::loadStadiumListFromFile(string filename)
         getline(inFile, stadiumName);
         getline(inFile, teamName);
         getline(inFile, starPlayer);
-        qDebug () << QString::fromStdString(starPlayer) << " ";
+//        qDebug () << QString::fromStdString(starPlayer) << " ";
         getline(inFile, stadiumStreetAddress);
         getline(inFile, stadiumCityStateZip);
         getline(inFile, stadiumPhoneNumber);

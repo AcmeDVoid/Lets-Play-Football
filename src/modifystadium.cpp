@@ -198,6 +198,7 @@ void modifyStadium::on_updateStadiumButton_clicked()
     std::string zip   = ui->zip->text().toStdString();
     std::string stadiumPhoneNumber = ui->phoneNumber->text().toStdString();
     std::string stadiumStreetAddress = ui->address->text().toStdString();
+    std::string stadiumStarPlayer = ui->starPlayer->text().toStdString();
 
     ui->labelErrorMessage->setText("");
     ui->labelErrorMessage->setPalette(invalidPalette);
@@ -231,7 +232,7 @@ void modifyStadium::on_updateStadiumButton_clicked()
     }
     if (valid) {
         std::string leagueType;
-        std::string surfaceType;
+        std::string roofType;
 
         if(ui->americanLeagueRadioButton->isChecked()){
             leagueType = "American";
@@ -241,26 +242,31 @@ void modifyStadium::on_updateStadiumButton_clicked()
         }
 
         if(ui->grassRadioButton->isChecked()){
-            surfaceType = "Grass";
+            roofType = "Open";
         }
-        else{
-            surfaceType = "Astro turf";
+        else if(ui->astroTurfRadioButton->isChecked()){
+            roofType = "Fixed";
+        }
+        else
+        {
+            roofType = "Retractable";
         }
 
         //update the vertex's name
 //        this->stadiumVertex->setName(ui->stadiumName->text().toStdString());
 
         //update the entire stadium object
-        stadiumToEdit->updateStadium(ui->stadiumName->text().toStdString(),
-                                    ui->teamName->text().toStdString(),
-                                    ui->stadiumTypology->text().toStdString(),
+        stadiumToEdit->updateStadium(/*stadiumName,//*/ui->stadiumName->text().toStdString(),
+                                    /*teamName,//*/ui->teamName->text().toStdString(),
+                                    roofType,
+                                    /*stadiumStarPlayer,//*/ui->starPlayer->text().toStdString(),
                                     /*m, d, y*/
                                     Date(ui->dateOpened->date().month(),
                                          ui->dateOpened->date().day(),
                                          ui->dateOpened->date().year()),
                                     ui->capacity->text().toInt(),
                                     leagueType,
-                                    surfaceType,
+                                    stadiumTypology,//ui->stadiumTypology->text().toStdString(),roofType,
                                     ui->city->text().toStdString(),
                                     ui->state->currentText().toStdString(),
                                     ui->zip->text().toStdString(),
