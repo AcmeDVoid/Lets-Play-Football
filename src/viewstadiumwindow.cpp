@@ -123,6 +123,7 @@ void ViewStadiumWindow::renderStadiumList()
         // build the qstring list of stadium attributes to display
         detailList << QString::fromStdString("Stadium Name: " + currentStadium->name());
         detailList << QString::fromStdString("Team Name    : " + currentStadium->team());
+        detailList << QString::fromStdString("Star Player: " + currentStadium->getStarPlayer());
         detailList << QString::fromStdString("Address          : " + currentStadium->streetAddress() + ", " + currentStadium->cityStateZip());
         detailList << QString::fromStdString("Phone Number: " + currentStadium->phoneNumber());
         detailList << QString::fromStdString("Conference     : " + currentStadium->type());
