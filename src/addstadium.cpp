@@ -220,7 +220,7 @@ Stadium addstadium::buildStadiumObject(){
              stadiumDateOpened,
              stadiumCapacity,
              stadiumSurface,
-             stadiumTypology);
+             stadiumTypology, "PLACEHOLDER");
 
     this->buildSouvenirList(newStadium);
 

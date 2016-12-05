@@ -19,7 +19,7 @@ public:
      */
     Stadium(std::string newName, std::string newTeamName, std::string newStreetAddress,
             std::string newCityStateZip, std::string newPhoneNumber, std::string newTeamType,
-            Date newDate, int newCapacity, std::string newSurface, std::string newTypologyType);
+            Date newDate, int newCapacity, std::string newSurface, std::string newTypologyType, std::string newStarPlayer);
 
     /**
      * @brief ~Stadium - The destructor for the Stadium class.
@@ -189,10 +189,11 @@ public:
      * @param newList the new map of souvenirs
      */
     void updateSouvenirList(std::map<int, Souvenir> newList);
-
+    std::string getStarPlayer() const;
 private:
     std::string stadiumName;            /// the name of the stadium
     std::string teamName;               /// the name of the team using the stadium
+    std::string starPlayer;
     std::string stadiumStreetAddress;   /// the stadiums street adress
     std::string stadiumCityStateZip;    /// the city, state and zipcode of the stadium
     std::string stadiumPhoneNumber;     /// the phone number of the stadium

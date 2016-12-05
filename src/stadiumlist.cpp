@@ -70,6 +70,7 @@ void StadiumList::loadStadiumListFromFile(string filename)
 
     std::string stadiumName = "";
     std::string teamName = "";
+    std::string starPlayer = "";
     std::string stadiumStreetAddress = "";
     std::string stadiumCityStateZip = "";
     std::string stadiumPhoneNumber = "";
@@ -91,6 +92,7 @@ void StadiumList::loadStadiumListFromFile(string filename)
     while (!inFile.eof()) {
         getline(inFile, stadiumName);
         getline(inFile, teamName);
+        getline(inFile, starPlayer);
         getline(inFile, stadiumStreetAddress);
         getline(inFile, stadiumCityStateZip);
         getline(inFile, stadiumPhoneNumber);
@@ -108,7 +110,7 @@ void StadiumList::loadStadiumListFromFile(string filename)
         newStadium = new Stadium(stadiumName, teamName, stadiumStreetAddress,
                                  stadiumCityStateZip, stadiumPhoneNumber,
                                  leagueType, *dateOpened, stadiumCapacity,
-                                 surfaceType, typology);
+                                 surfaceType, typology, starPlayer);
         addStadium(*newStadium);
 
         getline(inFile, traversalString);
