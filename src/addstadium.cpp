@@ -199,15 +199,19 @@ Stadium addstadium::buildStadiumObject(){
 
     int stadiumCapacity = ui->capacity->text().toInt();
 
-    std::string stadiumSurface;
+    std::string stadiumRoofType;
     if(ui->grassRadioButton->isChecked()){
-        stadiumSurface = "Grass";
+        stadiumRoofType = "Open";
     }
     else if(ui->astroTurfRadioButton->isChecked()){
-        stadiumSurface = "Astro turf";
+        stadiumRoofType = "Fixed";
+    }
+    else if(ui->radioTrackableButton->isChecked()){
+        stadiumRoofType = "Tractable";
     }
 
-    std::string stadiumTypology = ui->stadiumTypology->text().toStdString();
+    std::string stadiumSurfaceType = ui->stadiumTypology->text().toStdString();
+    std::string stadiumStarPlayer = ui->starPlayer->text().toStdString();
 
     //build the stadium
     Stadium newStadium = Stadium
@@ -219,8 +223,8 @@ Stadium addstadium::buildStadiumObject(){
              leagueType,
              stadiumDateOpened,
              stadiumCapacity,
-             stadiumSurface,
-             stadiumTypology, "PLACEHOLDER");
+             stadiumSurfaceType, stadiumRoofType,
+             stadiumStarPlayer);
 
     this->buildSouvenirList(newStadium);
 

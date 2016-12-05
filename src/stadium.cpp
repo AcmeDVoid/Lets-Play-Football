@@ -166,7 +166,7 @@ std::string Stadium::league(){
 
 void Stadium::updateStadium(std::string newStadiumName,
                    std::string newTeamName,
-                   std::string newTypology,
+                   std::string newTypology, string newStarPlayer,
                    Date newDateOpened,
                    int newStadiumCapacity,
                    std::string newLeagueType,
@@ -188,6 +188,7 @@ void Stadium::updateStadium(std::string newStadiumName,
     this->stadiumCityStateZip = newCity + ", " + newState + " " + newZipCode;
     this->stadiumStreetAddress = newStreetAddress;
     this->stadiumPhoneNumber = newPhoneNumber;
+    this->starPlayer = newStarPlayer;
 
 }
 

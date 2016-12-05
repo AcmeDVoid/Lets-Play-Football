@@ -119,7 +119,7 @@ void ViewStadiumWindow::renderStadiumList()
             continue;
         }
         // if the stadium roof type is open and its filtered out continue
-        if (displayOpenStadiumRoofType && currentStadium->typology() == "Open") {
+        if (displayOpenStadiumRoofType && currentStadium->typology() != "Open") {
             continue;
         }
 
