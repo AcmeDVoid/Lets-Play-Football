@@ -40,6 +40,7 @@ void ViewTeamWindow::renderTeamList()
         // build the qstring list of stadium attributes to display
         detailList << QString::fromStdString("Team Name    : " + currentStadium->team());
         detailList << QString::fromStdString("Stadium Name: " + currentStadium->name());
+        detailList << QString::fromStdString("Star Player: " + currentStadium->getStarPlayer());
         detailList << QString::fromStdString("Conference     : " + currentStadium->type());
         detailList << "Capacity         : " + QString::number(currentStadium->capacity());
         detailList << QString::fromStdString("Surface type  : " + currentStadium->surface());
