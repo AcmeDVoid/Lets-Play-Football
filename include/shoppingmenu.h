@@ -1,12 +1,3 @@
-/*************************************************************************
- * AUTHOR	     : Brett Korp, Bryce Hills, Nick Francke, Steve Fajardo
- * PROJECT #1    : Food Fantasy
- * TEAM:         : O Dude
- * CLASS	     : CS1D
- * SECTION       : MW 4:30 P.M.
- * DUE DATE      : 3/16/2016
- ************************************************************************/
-
 #ifndef SHOPPINGMENU_H
 #define SHOPPINGMENU_H
 
