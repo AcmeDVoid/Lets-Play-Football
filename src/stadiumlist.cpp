@@ -258,6 +258,7 @@ void StadiumList::saveStadiumList()
         // write stadium data to file
         outFile << stadium(i)->name() << endl;
         outFile << stadium(i)->team() << endl;
+        outFile << stadium(i)->getStarPlayer() << endl;
         outFile << stadium(i)->streetAddress() << endl;
         outFile << stadium(i)->cityStateZip() << endl;
         outFile << stadium(i)->phoneNumber() << endl;

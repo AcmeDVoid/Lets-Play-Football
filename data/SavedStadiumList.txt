@@ -1,5 +1,6 @@
 AT&T Stadium
 Dallas Cowboys
+Dez Bryant
 AT&T Stadium's Address
 Arlington, Texas
 (123) 456-7890
@@ -11,6 +12,7 @@ Retractable
 
 Arrowhead Stadium
 Kansas City Chiefs
+Justin Houston
 Arrowhead Stadium' Address
 Kansas City, Missouri
 (123) 456-7890
@@ -22,6 +24,7 @@ Open
 
 Bank of America Stadium
 Carolina Panthers
+Cam Newton
 Bank of America Stadium's Address
 Charlotte, North Carolina
 (123) 456-7890
@@ -33,6 +36,7 @@ Open
 
 CenturyLink Field
 Seattle Seahawks
+Russel Wilson
 CenturyLink Field's Address
 Seattle, Washington
 (123) 456-7890
@@ -44,6 +48,7 @@ Open
 
 EverBank Field
 Jacksonville Jaguars
+Allen Robinson
 EverBank Field's Address
 Jacksonville, Florida
 (123) 456-7890
@@ -55,6 +60,7 @@ Open
 
 FedExField
 Washington Redskins
+Trent Williams
 FedExField's Address
 Landover, Maryland
 (123) 456-7890
@@ -66,6 +72,7 @@ Open
 
 FirstEnergy Stadium
 Cleveland Browns
+Josh Gordon
 FirstEnergy Stadium's Address
 Cleveland, Ohio
 (123) 456-7890
@@ -77,6 +84,7 @@ Open
 
 Ford Field
 Detroit Lions
+Matt Stafford
 Ford Field's Address
 Detroit, Michigan
 (123) 456-7890
@@ -88,6 +96,7 @@ Fixed
 
 Georgia Dome
 Atlanta Falcons
+Julio Jones
 Georgia Dome's Address
 Atlanta, Georgia
 (123) 456-7890
@@ -99,6 +108,7 @@ Fixed
 
 Gillette Stadium
 New England Patriots
+Tom Brady
 Gillette Stadium's Address
 Foxborough, Massachusetts
 (123) 456-7890
@@ -110,6 +120,7 @@ Open
 
 Hard Rock Stadium
 Miami Dolphins
+Ndamukong Suh
 Hard Rock Stadium's Address
 Miami Gardens, Florida
 (123) 456-7890
@@ -121,6 +132,7 @@ Open
 
 Heinz Field
 Pittsburgh Steelers
+Antonio Brown
 Heinz Field's Address
 Pittsburgh, Pennsylvania
 (123) 456-7890
@@ -132,6 +144,7 @@ Open
 
 Lambeau Field
 Green Bay Packers
+Aaron Rodgers
 Lambeau Field's Address
 Green Bay, Wisconsin
 (123) 456-7890
@@ -143,6 +156,7 @@ Open
 
 Levi's Stadium
 San Francisco 49ers
+Navarro Bowman
 Levi's Stadium's Address
 Santa Clara, California
 (123) 456-7890
@@ -154,6 +168,7 @@ Open
 
 Lincoln Financial Field
 Philadelphia Eagles
+Fletcher Cox
 Lincoln Financial Field's Address
 Philadelphia, Pennsylvania
 (123) 456-7890
@@ -165,6 +180,7 @@ Open
 
 Los Angeles Memorial Coliseum
 Los Angeles Rams
+Aaron Donald
 Los Angeles Memorial Coliseum's Address
 Los Angeles, California
 (123) 456-7890
@@ -176,6 +192,7 @@ Open
 
 Lucas Oil Stadium
 Indianapolis Colts
+Andrew Luck
 Lucas Oil Stadium's Address
 Indianapolis, Indiana
 (123) 456-7890
@@ -187,6 +204,7 @@ Retractable
 
 M&T Bank Stadium
 Baltimore Ravens
+Joe Flacco
 M&T Bank Stadium's Address
 Baltimore, Maryland
 (123) 456-7890
@@ -198,6 +216,7 @@ Open
 
 Mercedes-Benz Superdome
 New Orleans Saints
+Drew Brees
 Mercedes-Benz Superdome's Address
 New Orleans, Louisiana
 (123) 456-7890
@@ -209,6 +228,7 @@ Fixed
 
 MetLife Stadium
 New York Giants
+Odell Beckham
 MetLife Stadium's Address
 East Rutherford, New Jersey
 (123) 456-7890
@@ -220,6 +240,7 @@ Open
 
 MetLife Stadium
 New York Jets
+Muhammad Wilson
 MetLife Stadium's Address
 East Rutherford, New Jersey
 (123) 456-7890
@@ -231,6 +252,7 @@ Open
 
 NRG Stadium
 Houston Texans
+J.J. Watt
 NRG Stadium's Address
 Houston, Texas
 (123) 456-7890
@@ -242,6 +264,7 @@ Retractable
 
 Nissan Stadium
 Tennessee Titans
+Marcus Mariota
 Nissan Stadium's Address
 Nashville, Tennessee
 (123) 456-7890
@@ -253,6 +276,7 @@ Open
 
 Oakland Alameda Coliseum
 Oakland Raiders
+Khalil Mack
 Oakland Alameda Coliseum's Address
 Oakland, California
 (123) 456-7890
@@ -264,6 +288,7 @@ Open
 
 Paul Brown Stadium
 Cincinnati Bengals
+A.J. Green
 Paul Brown Stadium's Address
 Cincinnati, Ohio
 (123) 456-7890
@@ -275,6 +300,7 @@ Open
 
 Qualcomm Stadium
 San Diego Chargers
+Keenan Allen
 Qualcomm Stadium's Address
 San Diego, California
 (123) 456-7890
@@ -286,6 +312,7 @@ Open
 
 Ralph Wilson Stadium
 Buffalo Bills
+Sammy Watkins
 Ralph Wilson Stadium's Address
 Orchard Park, New York
 (123) 456-7890
@@ -297,6 +324,7 @@ Open
 
 Raymond James Stadium
 Tampa Bay Buccaneers
+Jameis Winston
 Raymond James Stadium's Address
 Tampa, Florida
 (123) 456-7890
@@ -308,6 +336,7 @@ Open
 
 Soldier Field
 Chicago Bears
+Pemell McPhee
 Soldier Field's Address
 Chicago, Illinois
 (123) 456-7890
@@ -319,6 +348,7 @@ Open
 
 Sports Authority Field at Mile High
 Denver Broncos
+Von Miller
 Sports Authority Field at Mile High's Address
 Denver, Colorado
 (123) 456-7890
@@ -330,6 +360,7 @@ Open
 
 U.S. Bank Stadium
 Minnesota Vikings
+Adrian Peterson
 U.S. Bank Stadium's Address
 Minneapolis, Minnesota
 (123) 456-7890
@@ -341,6 +372,7 @@ Fixed
 
 University of Phoenix Stadium
 Arizona Cardinals
+Tyran Mathieu
 University of Phoenix Stadium's Address
 Glendale, Arizona
 (123) 456-7890
