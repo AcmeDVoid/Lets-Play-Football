@@ -29,20 +29,20 @@ Graph::~Graph() {
 /*************************************************************************
  * Accessors
  *************************************************************************/
-///*********************************************************************
-/// edges
-///this method returns a list of edges that are currently
-///in the graph
-///@return std::vector<Edge*>- a list of edges
+//*********************************************************************
+// edges
+//this method returns a list of edges that are currently
+//in the graph
+//@return std::vector<Edge*>- a list of edges
 std::vector<Edge*> Graph::edges() {
     return listOfEdges;
 }
 
-///*********************************************************************
-/// vertices
-///this method returns a vector full of vertices that
-///are currently saved in the graph.
-///@return std::vector<Vertex*> - a list of vertices
+//*********************************************************************
+// vertices
+//this method returns a vector full of vertices that
+//are currently saved in the graph.
+//@return std::vector<Vertex*> - a list of vertices
 std::vector<Vertex*> Graph::vertices() {
     return listOfVertices;
 }
@@ -122,13 +122,13 @@ void Graph::printVertices() {
     }
 }
 
-///*********************************************************************
-/// findVertex
-///this method takes in a string and performs a sequential search
-///to return a pointer to the vertex that has that passed in name.
-///@param name - the name of vertex object whose pointer we will return
-///@return - a pointer to the vertex with the passed in name attribute
-///@NOTE - returns null if we don't find anything!
+//*********************************************************************
+// findVertex
+//this method takes in a string and performs a sequential search
+//to return a pointer to the vertex that has that passed in name.
+//@param name - the name of vertex object whose pointer we will return
+//@return - a pointer to the vertex with the passed in name attribute
+//@NOTE - returns null if we don't find anything!
 Vertex* Graph::findVertex(std::string name) {
     for (unsigned int i = 0; i < this->listOfVertices.size(); i++) {
         if (listOfVertices.at(i)->name() == name) {
@@ -139,52 +139,29 @@ Vertex* Graph::findVertex(std::string name) {
     return 0;
 }
 
-///*********************************************************************
-/// findVertexByIndex
-///this method takes in an int and performs a sequential search
-///to return a pointer to the vertex that is of that index
-///@param name - the index of vertex object whose pointer we will return
-///@return - a pointer to the vertex with the passed in index attribute
-///@NOTE - returns null if we don't find anything!
+//*********************************************************************
+// findVertexByIndex
+//this method takes in an int and performs a sequential search
+//to return a pointer to the vertex that is of that index
+//@param name - the index of vertex object whose pointer we will return
+//@return - a pointer to the vertex with the passed in index attribute
+//@NOTE - returns null if we don't find anything!
 Vertex *Graph::findVertexByIndex(int index)
 {
     return listOfVertices.at(index);
 }
 
-/**
- * @brief findClosest Find the closest the vertex from the starting Vertex,
- * exclusively from the list of possible vertices passed in
- * @param startingVertex The starting vertex that we are choosing the closest
- * vertex to
- * @param possibleVertices The list of possible vertices to choose from when
- * deciding which is closest to the starting vertex
- * @return A pointer to the closest vertex to the starting vertex passed in
- */
 Vertex *Graph::findClosest(Vertex *startingVertex, QStringList possibleVertices)
 {
-    // array of distances
     int dist[size()];
-
-    // array of parents
     int parents[size()];
-
-    // min distance initialized to very large number
     int minDist = 999999;
-
-    // the index of the current closest vertex
     int minIndex = 0;
 
-    // perform djikstra's algorithm, changing the distance and parents array
     this->djikstra(startingVertex, dist, parents);
 
-    // for every vertex
     for (int i = 0; i < size(); i++) {
-        // store current vertex
         Vertex *curVertex = listOfVertices.at(i);
-
-        // if the distance from this vertex is the new shortest and the vertex is
-        // among the list of possible vertices, set the new shortest distance
-        // and the new shortest vertex
         if (dist[i] < minDist && curVertex != startingVertex
                 && possibleVertices.contains(QString::fromStdString(curVertex->name()))) {
             minDist = dist[i];
@@ -192,7 +169,6 @@ Vertex *Graph::findClosest(Vertex *startingVertex, QStringList possibleVertices)
         }
     }
 
-    // return the vertex shortest to the starting vertex
     return listOfVertices.at(minIndex);
 }
 
@@ -264,28 +240,22 @@ bool GraphEdgeCompare(const Edge* edge1, const Edge* edge2) {
 /**
  * length
  * Returns the length of the edge containing the parameter endpoints
- * Returns -1 if edge not found
  */
 double Graph::length(Vertex *endpointA, Vertex *endpointB) {
     if (endpointA == endpointB) {
         return -1;
     }
-    bool found = false;     // whether edge was found
-    double distance = -1;   // length of edge
-    // for everty edge
+    bool found = false;
+    double distance = -1;
     for (unsigned int i = 0; i < listOfEdges.size() && !found; i++) {
         Edge *edge = listOfEdges[i];
 
-        // if the edge has the end points of the vertices passed in its the edge
-        // we're looking for
         if (edge->hasEndpoints(endpointA, endpointB)) {
-            // set that we found it and set length
             found = true;
             distance = edge->length();
         }
     }
 
-    // return the length
     return distance;
 }
 
@@ -332,6 +302,20 @@ std::vector<Edge *> Graph::kruskals() {
     }
 
     return mst;
+
+    //        std::cout << "\nMinimum Spanning Tree:\n";
+
+    //        int mileage = 0;
+
+    // output the edges in the mst
+    //    for (unsigned int i = 0; i < mst.size(); i++) {
+    //        mileage += mst.at(i)->length();
+    //        std::cout << mst.at(i)->origin()->name() << " <-> "
+    //                << mst.at(i)->destination()->name() << " ("
+    //                << mst.at(i)->length() << " miles)\n";
+    //    }
+
+    //    std::cout << "Total Mileage: " + mileage << "\n";
 }
 
 /**
@@ -597,10 +581,8 @@ void Graph::insertVertex(Vertex *v) {
 
 void Graph::loadDefaultGraph()
 {
-    // not reversed by default
     reversed = false;
 
-    // size of default graph
     int size = 30;
 
     //an array of strings representing the vertices
@@ -685,6 +667,10 @@ void Graph::loadDefaultGraph()
                 // store origin and destination
                 Vertex *origin = listOfVertices.at(i);
                 Vertex *destination = listOfVertices.at(j);
+                //                qDebug() << "Origin: " << QString::fromStdString(listOfVertices.at(i)->name());
+                //                qDebug() << "Destination: " << QString::fromStdString(listOfVertices.at(j)->name());
+                //                qDebug() << "Length: " << edge;
+                //                qDebug();
 
                 // it is directed if the inverse edge is not the same
                 bool directed = edge != inverseEdge;
@@ -800,7 +786,6 @@ void Graph::saveEdges()
 
 void Graph::saveAll()
 {
-    // call methods to save the vertices and edges of the graph
     saveVertices();
     saveEdges();
 }
@@ -814,30 +799,30 @@ void Graph::sortEdges() {
     std::sort(listOfEdges.begin(), listOfEdges.end(), GraphEdgeCompare);
 }
 
-///*********************************************************************
-/// insertVertex
-/// this method takes in a string and adds that string
-/// as a vertex. For now we are just representing a vertex
-/// as a string, but it could easily be extended to be
-/// an object or even a key, value etc.
-///@param newName - the name of the vertex to add
-///@return nothing - void
+//*********************************************************************
+// insertVertex
+// this method takes in a string and adds that string
+//as a vertex. For now we are just representing a vertex
+//as a string, but it could easily be extended to be
+// an object or even a key, value etc.
+//@param newName - the name of the vertex to add
+//@return nothing - void
 void Graph::insertVertex(std::string newName) {
     Vertex *newVector = new Vertex(newName);
     listOfVertices.push_back(newVector);
 }
 
-///*********************************************************************
-///insertEdge
-///this method takes in two vertices as end points to an
-///edge as well as the length of the edge we are inserting
-///into the graph. The best way to visualize this is to understand
-///that each edge here is an object that has these required
-///attributes (two vertices and a length).
-///@param endPoint [in] - the 1st Vertex end point of the edge
-///@param otherEndPoint [in] - the 2nd Vertex end point of the edge
-///@param length [in] - the Double length of the edge (in miles)
-///@return - nothing: void
+//*********************************************************************
+//insertEdge
+//this method takes in two vertices as end points to an
+//edge as well as the length of the edge we are inserting
+//into the graph. The best way to visualize this is to understand
+//that each edge here is an object that has these required
+//attributes (two vertices and a length).
+//@param endPoint [in] - the 1st Vertex end point of the edge
+//@param otherEndPoint [in] - the 2nd Vertex end point of the edge
+//@param length [in] - the Double length of the edge (in miles)
+//@return - nothing: void
 void Graph::insertEdge(Vertex *origin, Vertex *destination, double length,
                        bool isDirected) {
 
@@ -966,15 +951,15 @@ void Graph::bfs(Vertex *startVertex) {
     std::cout << "\nThere are no forward edges in a BFS graph.\n\n";
 }
 
-///*********************************************************************
-///dfs (Depth-First-Search)
-///This method traverse through the graph of connected vertices by means
-///of their edges. We start traversing at the startVertex passed into
-///the method. We then decide to visit the vertex that has the shortest
-///mileage. We will always discover new edges in the most efficient or
-///(shortest) order.
-///@param startVertex - the vertex to start the search at
-///@return - nothing void
+//*********************************************************************
+//dfs (Depth-First-Search)
+//This method traverse through the graph of connected vertices by means
+//of their edges. We start traversing at the startVertex passed into
+//the method. We then decide to visit the vertex that has the shortest
+//mileage. We will always discover new edges in the most efficient or
+//(shortest) order.
+//@param startVertex - the vertex to start the search at
+//@return - nothing void
 void Graph::dfs(Vertex *startVertex /* IN */) {
 
     //mark the vertex as visited

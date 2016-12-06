@@ -22,6 +22,12 @@ INPUT(
 ./release/viewrevenue.o
 ./release/modifystadium.o
 ./release/modifystadiumselector.o
+./release/viewteamwindow.o
+./release/map.o
+./release/tripplanner.o
+./release/Graph.o
+./release/Edge.o
+./release/Vertex.o
 ./release/qrc_img.o
 ./release/moc_mainwindow.o
 ./release/moc_splashscreen.o
@@ -36,4 +42,6 @@ INPUT(
 ./release/moc_viewrevenue.o
 ./release/moc_modifystadium.o
 ./release/moc_modifystadiumselector.o
+./release/moc_viewteamwindow.o
+./release/moc_tripplanner.o
 );

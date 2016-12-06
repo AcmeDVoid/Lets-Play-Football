@@ -10,6 +10,7 @@
 #include <QPushButton>
 #include <QLabel>
 #include <QTextBrowser>
+#include <QMessageBox>
 #include "include/stadiumlist.h"
 #include "include/stadium.h"
 
@@ -49,10 +50,11 @@ private:
      * button filters and checkbox sorts
      */
     void renderStadiumList();
-    bool displayGrassSurfaces;
-    bool displayAstroturfSurfaces;
+//    bool displayGrassSurfaces;
+//    bool displayAstroturfSurfaces;
     bool displayNationalLeague;
     bool displayAmericanLeague;
+    bool displayOpenStadiumRoofType;
 
 private slots:
     /**

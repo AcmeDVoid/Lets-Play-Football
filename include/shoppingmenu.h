@@ -1,12 +1,3 @@
-/*************************************************************************
- * AUTHOR	     : Brett Korp, Bryce Hills, Nick Francke, Steve Fajardo
- * PROJECT #1    : Food Fantasy
- * TEAM:         : O Dude
- * CLASS	     : CS1D
- * SECTION       : MW 4:30 P.M.
- * DUE DATE      : 3/16/2016
- ************************************************************************/
-
 #ifndef SHOPPINGMENU_H
 #define SHOPPINGMENU_H
 
@@ -33,8 +24,9 @@ public:
      * @param masterList the master restaurant list
      * @param parent the parent window
      */
-//    explicit shoppingMenu(stack<string> stadiumPath, StadiumList* masterList,
-//                          QStringList selectedStadiums, QWidget *parent = 0);
+
+    explicit shoppingMenu(stack<string> stadiumPath, StadiumList* masterList,
+                          QStringList selectedStadiums, QWidget *parent = 0);
 
     /**
      * @brief shoppingMenu Destructor
@@ -77,7 +69,8 @@ private slots:
     /** SLOT
      * @brief on_buttonBox_accepted
      */
-    //void on_buttonBox_accepted();
+//    void on_buttonBox_accepted();
+
     void on_next_clicked();
     /** SLOT
      * @brief on_prev_clicked

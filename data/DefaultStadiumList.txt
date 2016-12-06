@@ -1,329 +1,383 @@
-Angels Stadium of Anaheim
-Los Angeles Angels of Anaheim
-2000 E Gene Autry Way, 
-Anaheim, CA 92806
-(714)940-2000
-4 19 1966
-45957
-Grass
+Arrowhead Stadium
+Kansas City Chiefs
+Justin Houston
+Arrowhead Stadium' Address
+Kansas City, Missouri
+(123) 456-7890
+01 01 2000
+76416
+Latitude 36 Bermuda Grass
 American
-Retro Modern
+Open
 
-Comerica Park
-Detroit Tigers
-2100 Woodward Ave, 
-Detroit, MI 48201
-(313) 962-4000 
-4 11 2000
-41547
-Grass
+AT&T Stadium
+Dallas Cowboys
+Dez Bryant
+AT&T Stadium's Address
+Arlington, Texas
+(123) 456-7890
+01 01 2000
+80000
+Matrix RealGrass Artificial turf
+National
+Retractable
+
+Bank of America Stadium
+Carolina Panthers
+Cam Newton
+Bank of America Stadium's Address
+Charlotte, North Carolina
+(123) 456-7890
+01 01 2000
+75419
+Voyager Bermuda Grass
+National
+Open
+
+CenturyLink Field
+Seattle Seahawks
+Russel Wilson
+CenturyLink Field's Address
+Seattle, Washington
+(123) 456-7890
+01 01 2000
+68000
+FieldTurf Revolution
+National
+Open
+
+EverBank Field
+Jacksonville Jaguars
+Allen Robinson
+EverBank Field's Address
+Jacksonville, Florida
+(123) 456-7890
+01 01 2000
+67246
+Tifway 419 Bermuda Grass
 American
-Retro Classic
+Open
 
-Fenway Park
-Boston Red Sox
-4 Yawkey Way, 
-Boston, MA 02215
-(877) 733-7699 
-4 20 1912
-37673  
-Grass
+FedExField
+Washington Redskins
+Trent Williams
+FedExField's Address
+Landover, Maryland
+(123) 456-7890
+01 01 2000
+82000
+Latitude 36 Bermuda Grass
+National
+Open
+
+FirstEnergy Stadium
+Cleveland Browns
+Josh Gordon
+FirstEnergy Stadium's Address
+Cleveland, Ohio
+(123) 456-7890
+01 01 2000
+67431
+Kentucky Bluegrass
 American
-Jewel Box
+Open
 
-Globe Life Park in Arlington
-Texas Rangers
-1000 Ballpark Way,
-Arlington, TX 76011
-(817) 273-5222 
-4 1 1994
-48114
-Grass
+Ford Field
+Detroit Lions
+Matt Stafford
+Ford Field's Address
+Detroit, Michigan
+(123) 456-7890
+01 01 2000
+65000
+FieldTurf Classic HD
+National
+Fixed
+
+Georgia Dome
+Atlanta Falcons
+Julio Jones
+Georgia Dome's Address
+Atlanta, Georgia
+(123) 456-7890
+01 01 2000
+71250
+FieldTurf Classic HD
+National
+Fixed
+
+Gillette Stadium
+New England Patriots
+Tom Brady
+Gillette Stadium's Address
+Foxborough, Massachusetts
+(123) 456-7890
+01 01 2000
+66829
+FieldTurf Revolution
 American
-Retro Classic
+Open
 
-Kauffman Stadium
-Kansas City Royals
-1 Royal Way
-Kansas City, MO 64129
-(816) 921-8000
-4 10 1973
-37903 
-Grass
+Hard Rock Stadium
+Miami Dolphins
+Ndamukong Suh
+Hard Rock Stadium's Address
+Miami Gardens, Florida
+(123) 456-7890
+01 01 2000
+65326
+Platinum TE Paspalum
 American
-Retro Modern
+Open
 
-Minute Maid Park
-Houston Astros
-501 Crawford St,
-Houston, TX 77002
-(713) 259-8000
-3 30 2000
-41676
-Grass
+Heinz Field
+Pittsburgh Steelers
+Antonio Brown
+Heinz Field's Address
+Pittsburgh, Pennsylvania
+(123) 456-7890
+01 01 2000
+68400
+Kentucky Bluegrass
 American
-Retro Modern
+Open
 
-O.co Coliseum
-Oakland Athletics
-7000 Coliseum Way
-Oakland, CA 94621
-(510) 569-2121
-9 18 1966
-35067
-Grass
+Lambeau Field
+Green Bay Packers
+Aaron Rodgers
+Lambeau Field's Address
+Green Bay, Wisconsin
+(123) 456-7890
+01 01 2000
+81435
+Hybrid Grass-Synthetic
+National
+Open
+
+Levi's Stadium
+San Francisco 49ers
+Navarro Bowman
+Levi's Stadium's Address
+Santa Clara, California
+(123) 456-7890
+01 01 2000
+68500
+Tifway II Bermuda Grass / Perennial Ryegrass mixture
+National
+Open
+
+Lincoln Financial Field
+Philadelphia Eagles
+Fletcher Cox
+Lincoln Financial Field's Address
+Philadelphia, Pennsylvania
+(123) 456-7890
+01 01 2000
+69596
+Desso GrassMaster
+National
+Open
+
+Los Angeles Memorial Coliseum
+Los Angeles Rams
+Aaron Donald
+Los Angeles Memorial Coliseum's Address
+Los Angeles, California
+(123) 456-7890
+01 01 2000
+93607
+Santa Ana Bermuda Grass
+National
+Open
+
+Lucas Oil Stadium
+Indianapolis Colts
+Andrew Luck
+Lucas Oil Stadium's Address
+Indianapolis, Indiana
+(123) 456-7890
+01 01 2000
+67000
+FieldTurf Classic HD
 American
-Multipurpose
+Retractable
 
-Oriole Park at Camden Yards
-Baltimore Orioles
-333 West Camden Street
-Baltimore, MD 21201
-(410) 685-9800
-4 6 1992
-45971
-Grass
+M&T Bank Stadium
+Baltimore Ravens
+Joe Flacco
+M&T Bank Stadium's Address
+Baltimore, Maryland
+(123) 456-7890
+01 01 2000
+71008	
+Tifway 419 Bermuda Grass
 American
-Retro Classic
+Open
 
-Progressive Field
-Cleveland Indians
-2401 Ontario Street
-Cleveland, OH 44115
-(216) 420-4487
-4 2 1994
-37675
-Grass
+Mercedes-Benz Superdome
+New Orleans Saints
+Drew Brees
+Mercedes-Benz Superdome's Address
+New Orleans, Louisiana
+(123) 456-7890
+01 01 2000
+73000
+UBU Sports Speed Series S5-M (synthetic turf)
+National
+Fixed
+
+MetLife Stadium
+New York Giants
+Odell Beckham
+MetLife Stadium's Address
+East Rutherford, New Jersey
+(123) 456-7890
+01 01 2000
+82500
+UBU Speed Series S5-M Synthetic Turf
+National
+Open
+
+MetLife Stadium
+New York Jets
+Muhammad Wilson
+MetLife Stadium's Address
+East Rutherford, New Jersey
+(123) 456-7890
+01 01 2000
+82500
+UBU Speed Series S5-M Synthetic Turf
 American
-Retro Modern
+Open
 
-Rogers Centre
-Toronto Blue Jays
-1 Blue Jays Way
-Toronto, Ontario, Canada M5V1J3
-+1 416-341-1000
-6 3 1989
-49282
-Astro turf
+Ralph Wilson Stadium
+Buffalo Bills
+Sammy Watkins
+Ralph Wilson Stadium's Address
+Orchard Park, New York
+(123) 456-7890
+01 01 2000
+71608
+A-Turf Titan 50 (artificial)
 American
-Multipurpose
+Open
 
-SafeCo Field
-Seattle Mariners
-1516 First Avenue South
-Seattle, WA 98134
-(206) 346-4000
-7 15 1999
-47574
-Grass
+Nissan Stadium
+Tennessee Titans
+Marcus Mariota
+Nissan Stadium's Address
+Nashville, Tennessee
+(123) 456-7890
+01 01 2000
+69143
+TifSport Bermuda Grass
 American
-Retro Modern
+Open
 
-Target Field
-Minnesota Twins
-353 N 5th St
-Minneapolis, MN 55403
-(800) 338-9467
-4 12 2010
-39021
-Grass
+NRG Stadium
+Houston Texans
+J.J. Watt
+NRG Stadium's Address
+Houston, Texas
+(123) 456-7890
+01 01 2000
+72220
+UBU Sports Speed Series S5-M
 American
-Retro Modern
+Retractable
 
-Tropicana Field
-Tampa Bay Rays
-1 Tropicana Dr
-St. Petersburg, FL 33705
-(727) 825-3137
-3 3 1990
-31042 
-Astro turf
+Oakland Alameda Coliseum
+Oakland Raiders
+Khalil Mack
+Oakland Alameda Coliseum's Address
+Oakland, California
+(123) 456-7890
+01 01 2000
+56063
+Tifway II Bermuda Grass
 American
-Multipurpose
+Open
 
-US Cellular Field
-Chicago White Sox
-333 West 35th Street
-Chicago, IL 60616
-(312) 674-1000
-4 18 1991
-40615
-Grass
+Paul Brown Stadium
+Cincinnati Bengals
+A.J. Green
+Paul Brown Stadium's Address
+Cincinnati, Ohio
+(123) 456-7890
+01 01 2000
+65515
+UBU Speed Series S5-M Synthetic Turf
 American
-Retro Classic
+Open
 
-Yankee Stadium
-New York Yankees
-1 E 161st St
-South Bronx, NY 10451
-(718) 293-4300
-4 16 2009
-49642
-Grass
+Qualcomm Stadium
+San Diego Chargers
+Keenan Allen
+Qualcomm Stadium's Address
+San Diego, California
+(123) 456-7890
+01 01 2000
+70561
+Bandera Bermuda Grass
 American
-Retro Classic
+Open
 
-AT&T Park
-San Francisco Giants
-24 Willie 5s Plaza
-San Francisco, CA 94107
-(415) 972-2000
-4 11 2000
-41915
-Grass
+Raymond James Stadium
+Tampa Bay Buccaneers
+Jameis Winston
+Raymond James Stadium's Address
+Tampa, Florida
+(123) 456-7890
+01 01 2000
+65890
+Tifway 419 Bermuda Grass
 National
-Retro Classic
+Open
 
-Busch Stadium
-St. Louis Cardinals
-700 Clark Street
-St. Louis, MO 63102
-(314) 345-9600
-4 10 2006
-43975
-Grass
+Soldier Field
+Chicago Bears
+Pemell McPhee
+Soldier Field's Address
+Chicago, Illinois
+(123) 456-7890
+01 01 2000
+61500
+Kentucky Bluegrass
 National
-Retro Classic
+Open
 
-Chase Field
-Arizona Diamondbacks
-401 East Jefferson Street
-Phoenix, AZ 85004
-(602) 462-6500
-3 31 1998
-48519
-Grass
-National
-Retro Modern
+Sports Authority Field at Mile High
+Denver Broncos
+Von Miller
+Sports Authority Field at Mile High's Address
+Denver, Colorado
+(123) 456-7890
+01 01 2000
+76125
+Kentucky Bluegrass
+American
+Open
 
-Citi Field
-New York Mets
-126th St. & Roosevelt Ave.
-Queens, NY 11368
-(718) 507-6387
-4 13 2009
-41922
-Grass
+U.S. Bank Stadium
+Minnesota Vikings
+Adrian Peterson
+U.S. Bank Stadium's Address
+Minneapolis, Minnesota
+(123) 456-7890
+01 01 2000
+73000
+UBU Speed Series S5-M Synthetic Turf
 National
-Retro Classic
+Fixed
 
-Citizens Bank Park
-Philadelphia Phillies
-1 Citizens Bank Way
-Philadelphia, PA 19148
-(215) 463-1000
-4 3 2004
-43651
-Grass
+University of Phoenix Stadium
+Arizona Cardinals
+Tyran Mathieu
+University of Phoenix Stadium's Address
+Glendale, Arizona
+(123) 456-7890
+01 01 2000
+63400
+Tifway 419 Bermuda Grass
 National
-Retro Classic
-
-Coors Field
-Colorado Rockies
-2001 Blake St
-Denver, CO 80205
-(303) 292-0200
-4 26 1995
-50398
-Grass
-National
-Retro Classic
-
-Dodger Stadium
-Los Angeles Dodgers
-1000 Elysian Park Avenue
-Los Angeles, CA 90090
-(323) 224-1507
-4 10 1962
-56000
-Grass
-National
-Modern
-
-Great America Ball Park
-Cincinnati Reds
-100 Joe Nuxhall Way
-Cincinnati, OH 45202
-(513) 381-7337
-3 31 2003
-42319
-Grass
-National
-Retro Modern
-
-Marlins Park
-Miami Marlins
-501 Marlins Way
-Miami, FL 33125
-(305)480-1300
-4 4 2012
-36742
-Grass
-National
-Contemporary
-
-Miller Park
-Milwaukee Brewers
-1 Brewers Way
-Milwaukee, WI 53214
-(414) 902-4400
-4 6 2001
-41900
-Grass
-National
-Retro Modern
-
-Nationals Park
-Washington Nationals
-1500 S Capitol St SE
-Washington, DC 20003
-(202) 675-6287
-3 30 2008
-41888
-Grass
-National
-Retro Modern
-
-Petco Park
-San Diego Padres
-19 Tony Gwynn Drive
-San Diego, CA 92101
-(619) 795-5000
-4 8 2004
-41164
-Grass
-National
-Retro Modern
-
-PNC Park
-Pittsburgh Pirates
-115 Federal St
-Pittsburgh, PA 15212
-(412) 321-2827
-3 31 2001
-38362
-Grass
-National
-Retro Classic
-
-Turner Field
-Atlanta Braves
-755 Hank Aaron Drive
-Atlanta, GA 30315
-(404) 522-7630
-3 29 1997
-49586
-Grass
-National
-Retro Classic
-
-Wrigley Field
-Chicago Cubs
-1060 West Addison Street
-Chicago, IL 60613
-(773) 404-2827
-4 23 1914
-42495
-Grass
-National
-Jewel Box
+Retractable

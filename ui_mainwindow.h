@@ -41,6 +41,8 @@ public:
     QGroupBox *groupBox;
     QVBoxLayout *verticalLayout_2;
     QLabel *main_pic;
+    QPushButton *buttonViewTeams;
+    QPushButton *buttonTripPlanner;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QStatusBar *statusBar;
@@ -49,7 +51,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1137, 465);
+        MainWindow->resize(1201, 465);
         QIcon icon;
         icon.addFile(QStringLiteral(":/nfl icon.png"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
@@ -98,13 +100,23 @@ public:
 
         verticalLayout_2->addWidget(main_pic);
 
+        buttonViewTeams = new QPushButton(groupBox);
+        buttonViewTeams->setObjectName(QStringLiteral("buttonViewTeams"));
+
+        verticalLayout_2->addWidget(buttonViewTeams);
+
+        buttonTripPlanner = new QPushButton(groupBox);
+        buttonTripPlanner->setObjectName(QStringLiteral("buttonTripPlanner"));
+
+        verticalLayout_2->addWidget(buttonTripPlanner);
+
 
         horizontalLayout->addWidget(groupBox);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1137, 21));
+        menuBar->setGeometry(QRect(0, 0, 1201, 21));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QStringLiteral("menuFile"));
         MainWindow->setMenuBar(menuBar);
@@ -130,6 +142,8 @@ public:
         buttonViewStadiums->setText(QApplication::translate("MainWindow", "View Stadiums", 0));
         groupBox->setTitle(QString());
         main_pic->setText(QString());
+        buttonViewTeams->setText(QApplication::translate("MainWindow", "View Teams", 0));
+        buttonTripPlanner->setText(QApplication::translate("MainWindow", "Trip Planner", 0));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", 0));
     } // retranslateUi
 

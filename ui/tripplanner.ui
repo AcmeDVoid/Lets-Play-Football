@@ -83,8 +83,8 @@
   <widget class="QPushButton" name="buttonCancel">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>60</y>
+     <x>390</x>
+     <y>30</y>
      <width>75</width>
      <height>21</height>
     </rect>
@@ -100,8 +100,8 @@
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>100</y>
-     <width>81</width>
+     <y>60</y>
+     <width>91</width>
      <height>17</height>
     </rect>
    </property>
@@ -112,14 +112,14 @@
   <widget class="QPushButton" name="buttonMST">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>130</y>
-     <width>75</width>
-     <height>23</height>
+     <x>300</x>
+     <y>100</y>
+     <width>141</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>MST</string>
+    <string>Minimum Spanning  Tree</string>
    </property>
   </widget>
  </widget>

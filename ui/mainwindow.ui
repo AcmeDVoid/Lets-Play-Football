@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1137</width>
+    <width>1201</width>
     <height>465</height>
    </rect>
   </property>
@@ -73,6 +73,20 @@
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QPushButton" name="buttonViewTeams">
+         <property name="text">
+          <string>View Teams</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="buttonTripPlanner">
+         <property name="text">
+          <string>Trip Planner</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
@@ -83,7 +97,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1137</width>
+     <width>1201</width>
      <height>21</height>
     </rect>
    </property>

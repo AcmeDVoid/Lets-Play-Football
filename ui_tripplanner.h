@@ -69,14 +69,14 @@ public:
         buttonStartTrip->setGeometry(QRect(310, 30, 75, 21));
         buttonCancel = new QPushButton(TripPlanner);
         buttonCancel->setObjectName(QStringLiteral("buttonCancel"));
-        buttonCancel->setGeometry(QRect(310, 60, 75, 21));
+        buttonCancel->setGeometry(QRect(390, 30, 75, 21));
         checkBoxSelectAll = new QCheckBox(TripPlanner);
         checkBoxSelectAll->setObjectName(QStringLiteral("checkBoxSelectAll"));
         checkBoxSelectAll->setEnabled(true);
-        checkBoxSelectAll->setGeometry(QRect(310, 100, 81, 17));
+        checkBoxSelectAll->setGeometry(QRect(310, 60, 91, 17));
         buttonMST = new QPushButton(TripPlanner);
         buttonMST->setObjectName(QStringLiteral("buttonMST"));
-        buttonMST->setGeometry(QRect(310, 130, 75, 23));
+        buttonMST->setGeometry(QRect(300, 100, 141, 41));
 
         retranslateUi(TripPlanner);
 
@@ -90,7 +90,7 @@ public:
         buttonStartTrip->setText(QApplication::translate("TripPlanner", "Start Trip", 0));
         buttonCancel->setText(QApplication::translate("TripPlanner", "Cancel", 0));
         checkBoxSelectAll->setText(QApplication::translate("TripPlanner", "Select All", 0));
-        buttonMST->setText(QApplication::translate("TripPlanner", "MST", 0));
+        buttonMST->setText(QApplication::translate("TripPlanner", "Minimum Spanning  Tree", 0));
     } // retranslateUi
 
 };

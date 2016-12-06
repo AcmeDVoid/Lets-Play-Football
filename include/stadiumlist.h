@@ -7,7 +7,7 @@
 #include <fstream> // files
 #include <limits> // numeric limits
 #include <QDebug>
-//#include "include/Graph.h"
+#include "include/Graph.h"
 
 class StadiumList {
 public:
@@ -110,8 +110,9 @@ public:
     void sortByDateOpened();
     void sortBySeatingCapacity();
     void sortByParkTypology();
+    void sortByStarPlayer();
 
-//        Graph* graph();
+        Graph* graph();
 
 protected:
     /*************************************************************************
@@ -139,7 +140,9 @@ protected:
 
 private:
     vector<Stadium> stadiumList;    ///a vector of Stadium objects that represents the underlying list of stadiums
-//    Graph *theGraph;                ///a pointer to the instantiated graph from main
+    Graph *theGraph;                ///a pointer to the instantiated graph from main
 };
 
 #endif // STADIUMLIST_H
+
+

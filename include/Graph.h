@@ -1,12 +1,3 @@
-/*************************************************************************
- * AUTHOR	     : Steve Fajardo
- * STUDENT ID    : 832032
- * ASSIGNMENT #14: Djikstra & MST
- * CLASS	     : CS1D
- * SECTION       : MW 4:30 P.M.
- * DUE DATE      : 4/25/16
- ************************************************************************/
-
 #ifndef GRAPH_H_
 #define GRAPH_H_
 
@@ -49,14 +40,14 @@ public:
     /*************************************************************************
      * Accessors
      *************************************************************************/
-    ///*********************************************************************
-    /// edges
-    ///@return std::vector<Edge*>- a list of edges
+    //*********************************************************************
+    // edges
+    //@return std::vector<Edge*>- a list of edges
     std::vector<Edge*> edges();
 
-    ///*********************************************************************
-    /// vertices
-    ///@return std::vector<Vertex*> - a list of vertices
+    //*********************************************************************
+    // vertices
+    //@return std::vector<Vertex*> - a list of vertices
     std::vector<Vertex*> vertices();
 
     /**
@@ -77,31 +68,22 @@ public:
      */
     void printVertices();
 
-    ///*********************************************************************
-    /// findVertex
-    ///@param name - the name of vertex object whose pointer we will return
-    ///@return - a pointer to the vertex with the passed in name attribute
-    ///@NOTE - returns null if we don't find anything!
+    //*********************************************************************
+    // findVertex
+    //@param name - the name of vertex object whose pointer we will return
+    //@return - a pointer to the vertex with the passed in name attribute
+    //@NOTE - returns null if we don't find anything!
     Vertex* findVertex(std::string name);
 
-    ///*********************************************************************
-    /// findVertexByIndex
-    ///this method takes in an int and performs a sequential search
-    ///to return a pointer to the vertex that is of that index
-    ///@param name - the index of vertex object whose pointer we will return
-    ///@return - a pointer to the vertex with the passed in index attribute
-    ///@NOTE - returns null if we don't find anything!
+    //*********************************************************************
+    // findVertexByIndex
+    //this method takes in an int and performs a sequential search
+    //to return a pointer to the vertex that is of that index
+    //@param name - the index of vertex object whose pointer we will return
+    //@return - a pointer to the vertex with the passed in index attribute
+    //@NOTE - returns null if we don't find anything!
     Vertex* findVertexByIndex(int index);
 
-    /**
-     * @brief findClosest Find the closest the vertex from the starting Vertex,
-     * exclusively from the list of possible vertices passed in
-     * @param startingVertex The starting vertex that we are choosing the closest
-     * vertex to
-     * @param possibleVertices The list of possible vertices to choose from when
-     * deciding which is closest to the starting vertex
-     * @return A pointer to the closest vertex to the starting vertex passed in
-     */
     Vertex *findClosest(Vertex *startingVertex, QStringList possibleVertices);
 
     /**
@@ -117,7 +99,6 @@ public:
     /**
      * length
      * Returns the length of the edge containing the parameter endpoints
-     * Returns -1 if edge not found
      */
     double length(Vertex *endpointA, Vertex *endpointB);
 
@@ -167,27 +148,27 @@ public:
     /*************************************************************************
      * Mutators
      *************************************************************************/
-    ///*********************************************************************
-    /// insertVertex
-    ///@param newName - the name of the vertex to add
-    ///@return nothing - void
+    //*********************************************************************
+    // insertVertex
+    //@param newName - the name of the vertex to add
+    //@return nothing - void
     void insertVertex(std::string newName);
 
-    ///*********************************************************************
-    ///insertEdge
-    ///@param endPoint [in] - the 1st Vertex end point of the edge
-    ///@param otherEndPoint [in] - the 2nd Vertex end point of the edge
-    ///@param length [in] - the Double length of the edge (in miles)
-    ///@return - nothing: void
+    //*********************************************************************
+    //insertEdge
+    //@param endPoint [in] - the 1st Vertex end point of the edge
+    //@param otherEndPoint [in] - the 2nd Vertex end point of the edge
+    //@param length [in] - the Double length of the edge (in miles)
+    //@return - nothing: void
     void insertEdge(Vertex *
 
                     , Vertex *destination, double length,
             bool isDirected = true);
 
-    ///*********************************************************************
-    ///dfs (depth-first-search)
-    ///@param startVertex - the vertex to start the search at
-    ///@return - nothing void
+    //*********************************************************************
+    //dfs (depth-first-search)
+    //@param startVertex - the vertex to start the search at
+    //@return - nothing void
     void dfs(Vertex *v);
 
 
@@ -232,37 +213,19 @@ public:
      */
     void insertVertex(Vertex *v);
 
-    /**
-     * @brief Initializes the graph with the default vertices and edges.
-     */
     void loadDefaultGraph();
-
-    /**
-     * @brief loadSavedGraph
-     */
     void loadSavedGraph();
 
-    /**
-     * @brief Outputs the vertices of the graph to a txt file.
-     */
     void saveVertices();
-
-    /**
-     * @brief Outputs the edges of the graph to a txt file.
-     */
     void saveEdges();
-
-    /**
-     * @brief Calls the methods to save the vertices and save the edges.
-     */
     void saveAll();
 
 
 private:
-    std::vector<Edge*> listOfEdges;		 ///a list of edges in the graph
-    std::vector<Vertex*> listOfVertices; ///a list of vertices in the graph
-    bool reversed;						 ///whether the edges in the graph are
-                                         /// reversed.
+    std::vector<Edge*> listOfEdges;		 //a list of edges in the graph
+    std::vector<Vertex*> listOfVertices; //a list of vertices in the graph
+    bool reversed;						 //whether the edges in the graph are
+                                         // reversed.
 };
 
 #endif /* GRAPH_H_ */

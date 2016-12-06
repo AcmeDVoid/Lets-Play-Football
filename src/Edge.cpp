@@ -1,12 +1,3 @@
-/*************************************************************************
- * AUTHOR	     : Steve Fajardo
- * STUDENT ID    : 832032
- * ASSIGNMENT #14: Djikstra & MST
- * CLASS	     : CS1D
- * SECTION       : MW 4:30 P.M.
- * DUE DATE      : 4/25/16
- ************************************************************************/
-
 #include "include/Edge.h"
 #include "include/Vertex.h"
 
@@ -59,7 +50,6 @@ void Edge::reverse() {
     Vertex *oldOrigin = endVertices[0];
     Vertex *oldDestination = endVertices[1];
 
-    // male the destination the origin and vice versa
     endVertices[0] = oldDestination;
     endVertices[1] = oldOrigin;
 }
@@ -145,12 +135,12 @@ bool Edge::isSameEdge(Edge *otherEdge) {
     return same;
 }
 
-///*****************************************************************
-///opposite
-///this method returns the vertex that is opposite of the vertex
-///on this edge that was passed in.
-///@param otherVertex - the vertex to find the opposite of
-///@return a pointer to the vertex opposite of the vertex passed in
+//*****************************************************************
+//opposite
+//this method returns the vertex that is opposite of the vertex
+//on this edge that was passed in.
+//@param otherVertex - the vertex to find the opposite of
+//@return a pointer to the vertex opposite of the vertex passed in
 Vertex* Edge::opposite(Vertex* otherVertex /* IN */) {
     //if the first vertex matches the one we passed in, we will
     //return the 2nd vertex (b/c we want the opposite)

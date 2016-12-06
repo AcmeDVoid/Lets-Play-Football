@@ -1,12 +1,3 @@
-/*************************************************************************
- * AUTHOR	     : Steve Fajardo
- * STUDENT ID    : 832032
- * ASSIGNMENT #14: Djikstra & MST
- * CLASS	     : CS1D
- * SECTION       : MW 4:30 P.M.
- * DUE DATE      : 4/25/16
- ************************************************************************/
-
 #include "include/Vertex.h"
 #include "include/Edge.h"
 #include <algorithm>
@@ -64,21 +55,16 @@ std::vector<Edge*> Vertex::incidentEdges() {
     return listOfIncidentEdges;
 }
 
-
 std::vector<Edge *> Vertex::outgoingEdges() {
-    // for every edge add it to the list of outgoing edges if this vertex is the
-    // origin for the edge (if directed) or just an endpoint (if not directed)
     std::vector<Edge *> outgoing;
     for (unsigned int i = 0; i < listOfIncidentEdges.size(); i++) {
         Edge *edge = listOfIncidentEdges[i];
-        // if directed must be origin
         if (edge->isDirected()) {
             if (edge->origin() == this) {
                 outgoing.push_back(edge);
             }
         }
         else if (edge->origin() == this || edge->destination() == this) {
-            // if not directed just must be an endpoint
             outgoing.push_back(edge);
         }
 
@@ -93,14 +79,12 @@ std::vector<Edge *> Vertex::outgoingEdges() {
  */
 std::vector<Vertex*> Vertex::adjacentVertices() {
     std::vector<Vertex *> vertices;
-    // for every edge
     for (unsigned int i = 0; i < listOfIncidentEdges.size(); i++) {
         Edge *edge = listOfIncidentEdges[i];
 
         Vertex *origin = edge->origin();
         Vertex *destination = edge->destination();
 
-        // if the vertex is opposite of this vertex then its an adjacent vertex
         if (origin != this) {
             vertices.push_back(edge->origin());
         }
@@ -171,12 +155,8 @@ bool Vertex::hasIncidentEdgeStored(Edge* key) {
  * Returns the distance between this vertex and the other vertex parameter.
  */
 double Vertex::distanceFrom(Vertex *otherVertex) const {
-    // initialize values
     bool found = false;
     double distance = 0.0;
-
-    // check every edge, if it has the endpoints of this vertex and the paramter
-    // vertex, set the distance and mark found
     for (unsigned int i = 0; i < listOfIncidentEdges.size() && !found; i++) {
         Edge *curEdge = listOfIncidentEdges.at(i);
         if (curEdge->hasEndPoint(otherVertex)) {
@@ -185,7 +165,6 @@ double Vertex::distanceFrom(Vertex *otherVertex) const {
         }
     }
 
-    // return the distance
     return distance;
 }
 
@@ -194,7 +173,6 @@ double Vertex::distanceFrom(Vertex *otherVertex) const {
  * Returns the level of the vertex in the search.
  */
 int Vertex::level() const {
-    // return level
     return vertexLevel;
 }
 

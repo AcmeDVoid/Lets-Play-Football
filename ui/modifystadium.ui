@@ -33,7 +33,7 @@
             <item row="2" column="0">
              <widget class="QLabel" name="labelTypology">
               <property name="text">
-               <string>Stadium Typology</string>
+               <string>Surface Type</string>
               </property>
              </widget>
             </item>
@@ -80,7 +80,7 @@
             <item row="9" column="0">
              <widget class="QLabel" name="label_11">
               <property name="text">
-               <string>Grass Surface Type</string>
+               <string>Roof Type</string>
               </property>
              </widget>
             </item>
@@ -90,7 +90,7 @@
             <item row="6" column="0">
              <widget class="QLabel" name="label_8">
               <property name="text">
-               <string>League Type</string>
+               <string>Football Conference</string>
               </property>
              </widget>
             </item>
@@ -101,16 +101,23 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_2">
                <item>
+                <widget class="QRadioButton" name="radioRetrackableButton">
+                 <property name="text">
+                  <string>Retractable</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
                 <widget class="QRadioButton" name="grassRadioButton">
                  <property name="text">
-                  <string>Grass</string>
+                  <string>Open</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QRadioButton" name="astroTurfRadioButton">
                  <property name="text">
-                  <string>Synthetic</string>
+                  <string>Fixed</string>
                  </property>
                 </widget>
                </item>
@@ -126,14 +133,14 @@
                <item>
                 <widget class="QRadioButton" name="nationalLeagueRadioButton">
                  <property name="text">
-                  <string>National League</string>
+                  <string>National</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QRadioButton" name="americanLeagueRadioButton">
                  <property name="text">
-                  <string>American League</string>
+                  <string>American</string>
                  </property>
                 </widget>
                </item>
@@ -155,12 +162,6 @@
             <string>Address and Phone Number</string>
            </property>
            <layout class="QGridLayout" name="gridLayout_3">
-            <item row="3" column="1">
-             <widget class="QLineEdit" name="address"/>
-            </item>
-            <item row="4" column="1">
-             <widget class="QLineEdit" name="phoneNumber"/>
-            </item>
             <item row="0" column="0">
              <widget class="QLabel" name="labelCity">
               <property name="text">
@@ -168,11 +169,14 @@
               </property>
              </widget>
             </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="phoneNumber"/>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="address"/>
+            </item>
             <item row="1" column="1">
              <widget class="QComboBox" name="state"/>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLineEdit" name="city"/>
             </item>
             <item row="4" column="0">
              <widget class="QLabel" name="labelPhone">
@@ -180,6 +184,9 @@
                <string>Phone Number</string>
               </property>
              </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="city"/>
             </item>
             <item row="3" column="0">
              <widget class="QLabel" name="labelAddress">
@@ -202,6 +209,16 @@
              <widget class="QLabel" name="labelZipCode">
               <property name="text">
                <string>Zip Code</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLineEdit" name="starPlayer"/>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="labelStarPlayer">
+              <property name="text">
+               <string>Star Player</string>
               </property>
              </widget>
             </item>

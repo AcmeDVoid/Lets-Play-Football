@@ -20,61 +20,61 @@
  * @param masterList a pointer to the master restaurant list that the program uses.
  * @param parent - a qt thing, the parent object defaults to 0
  */
-//shoppingMenu::shoppingMenu(stack<string> pathStack,
-//                           StadiumList* masterList, QStringList selectedStadiums,
-//                           QWidget *parent)
-//    : QDialog(parent), ui(new Ui::shoppingMenu) {
+shoppingMenu::shoppingMenu(stack<string> pathStack,
+                           StadiumList* masterList, QStringList selectedStadiums,
+                           QWidget *parent)
+    : QDialog(parent), ui(new Ui::shoppingMenu) {
 
-//    originalSelections = selectedStadiums;
-//    string stadiumName;    //storage for the index form the restaurant list
-//    idxCounter = 0;
-//    totalDistance = 0;
+    originalSelections = selectedStadiums;
+    string stadiumName;    //storage for the index form the restaurant list
+    idxCounter = 0;
+    totalDistance = 0;
 
-//    //store a reference to the master list in the object
-//    masterStadiumList = masterList;
+    //store a reference to the master list in the object
+    masterStadiumList = masterList;
 
-//    //allocate space for the new reference list
-//    StadiumList* listOfSelectedStadiums = new StadiumList();
+    //allocate space for the new reference list
+    StadiumList* listOfSelectedStadiums = new StadiumList();
 
-//    //iterate through the queue
-//    while(!pathStack.empty()){
-//        //get the first index in the stack and pop remove it
-//        stadiumName = pathStack.top();
-//        pathStack.pop();
+    //iterate through the queue
+    while(!pathStack.empty()){
+        //get the first index in the stack and pop remove it
+        stadiumName = pathStack.top();
+        pathStack.pop();
 
-//        //call the copy constructor, the restaurant(idx) method returns pointer,
-//        //we dereference the restaurant at the index popped from the queue and
-//        //store it into this newRestaurant object
-//        Stadium newStadium = *(masterStadiumList->stadium(stadiumName));
+        //call the copy constructor, the restaurant(idx) method returns pointer,
+        //we dereference the restaurant at the index popped from the queue and
+        //store it into this newRestaurant object
+        Stadium newStadium = *(masterStadiumList->stadium(stadiumName));
 
-//        //then add that new restaurant into the reference list
-//        listOfSelectedStadiums->addStadium( newStadium );
-//    }
+        //then add that new restaurant into the reference list
+        listOfSelectedStadiums->addStadium( newStadium );
+    }
 
-//    //ui inits
-//    ui->setupUi(this);
+    //ui inits
+    ui->setupUi(this);
 
-//    //set cart headers and column sizes
-//    QStringList cartHeaders;
-//    cartHeaders.push_back("Item");
-//    cartHeaders.push_back("Price");
-//    cartHeaders.push_back("Quantity");
-//    cartHeaders.push_back("Sub-Total");
-//    ui->cart->setColumnCount(cartHeaders.count());
-//    ui->cart->setHeaderLabels(cartHeaders);
-//    ui->cart->expandAll();
-//    ui->cart->setContextMenuPolicy(Qt::CustomContextMenu);
+    //set cart headers and column sizes
+    QStringList cartHeaders;
+    cartHeaders.push_back("Item");
+    cartHeaders.push_back("Price");
+    cartHeaders.push_back("Quantity");
+    cartHeaders.push_back("Sub-Total");
+    ui->cart->setColumnCount(cartHeaders.count());
+    ui->cart->setHeaderLabels(cartHeaders);
+    ui->cart->expandAll();
+    ui->cart->setContextMenuPolicy(Qt::CustomContextMenu);
 
-//    //save the reference list to the object
-//    selectedRestaurants = listOfSelectedStadiums;
+    //save the reference list to the object
+    selectedRestaurants = listOfSelectedStadiums;
 
-//    //allocated choices vector
-//    choices = new purchaseChoices;
+    //allocated choices vector
+    choices = new purchaseChoices;
 
-//    //start the travesal through the restaurant list and save each
-//    //item selected in the ui
-//    startSelectingItems(idxCounter);
-//}
+    //start the travesal through the restaurant list and save each
+    //item selected in the ui
+    startSelectingItems(idxCounter);
+}
 
 /**
  * @brief shoppingMenu::~shoppingMenu
@@ -205,13 +205,13 @@ void shoppingMenu::startSelectingItems(int i){
         //on the 1st stadium we visit the distance is 0 miles, b/c we are starting here
         totalDistance += 0;
     }
-//    else{
-//        totalDistance += masterStadiumList->graph()->length
-//        (
-//            masterStadiumList->graph()->findVertex(selectedRestaurants->stadium(i)->name()) ,
-//            masterStadiumList->graph()->findVertex(selectedRestaurants->stadium(i - 1)->name())
-//        );
-//    }
+    else{
+        totalDistance += masterStadiumList->graph()->length
+        (
+            masterStadiumList->graph()->findVertex(selectedRestaurants->stadium(i)->name()) ,
+            masterStadiumList->graph()->findVertex(selectedRestaurants->stadium(i - 1)->name())
+        );
+    }
     ui->distance->setText("Distance Traveled: " + QString::number(totalDistance));
 
     //add the restaurant name to the visited history list

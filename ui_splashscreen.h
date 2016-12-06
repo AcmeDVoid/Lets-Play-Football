@@ -109,7 +109,7 @@ public:
         groupBox_2->setTitle(QString());
         label->setText(QApplication::translate("splashscreen", "Football Stadiums Project", 0));
         label_2->setText(QApplication::translate("splashscreen", "CS1D: Data Structures", 0));
-        slpash_text->setText(QApplication::translate("splashscreen", "Software Created by: John Zavala, Nhan Phan, Sina,  Kayvon", 0));
+        slpash_text->setText(QApplication::translate("splashscreen", "Software Created by: Nhan Phan, John Zavala, Sina,  Kayvon", 0));
     } // retranslateUi
 
 };
