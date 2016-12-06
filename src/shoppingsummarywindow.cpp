@@ -220,6 +220,7 @@ std::vector<total*> shoppingSummaryWindow::makeVectorUnique(std::vector<total*>*
 //                std::vector<total*>::iterator it = totals->begin() + j;
 //                totals->erase(it);
 
+                int innerSize = totals->size();
             } //end inner if
         } //end inner for
     } //end outter for

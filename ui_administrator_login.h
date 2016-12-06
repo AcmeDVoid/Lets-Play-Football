@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'administrator_login.ui'
 **
-** Created by: Qt User Interface Compiler version 5.7.0
+** Created by: Qt User Interface Compiler version 5.4.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -80,6 +80,7 @@ public:
 
         buttonLogIn = new QPushButton(groupBox);
         buttonLogIn->setObjectName(QStringLiteral("buttonLogIn"));
+        buttonLogIn->setDefault(true);
 
         gridLayout->addWidget(buttonLogIn, 3, 1, 1, 1);
 
@@ -96,9 +97,6 @@ public:
         QWidget::setTabOrder(buttonLogIn, buttonCancel);
 
         retranslateUi(administrator_login);
-
-        buttonLogIn->setDefault(true);
-
 
         QMetaObject::connectSlotsByName(administrator_login);
     } // setupUi

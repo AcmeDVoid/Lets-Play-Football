@@ -3,7 +3,6 @@
 #include "include/administrator_login.h"
 #include "include/viewstadiumwindow.h"
 #include "include/modifystadiumselector.h"
-#include "include/viewteamwindow.h"
 
 #include "ui_mainwindow.h"
 
@@ -72,9 +71,3 @@ void MainWindow::on_buttonViewStadiums_clicked()
 //    TripPlanner tp(stadiumList);
 //    tp.exec();
 //}
-
-void MainWindow::on_buttonViewTeams_clicked()
-{
-    ViewTeamWindow vtw(stadiumList);
-    vtw.exec();
-}

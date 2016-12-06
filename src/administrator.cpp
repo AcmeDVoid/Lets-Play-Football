@@ -1,6 +1,6 @@
-#include "include/administrator.h"
+#include "include\administrator.h"
 #include "ui_administrator.h"
-#include "include/addstadium.h"
+#include "include\addstadium.h"
 #include "changesouvenir.h"
 #include "ui_changesouvenir.h"
 #include "include/viewrevenue.h"

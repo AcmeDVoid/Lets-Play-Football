@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'addstadium.ui'
 **
-** Created by: Qt User Interface Compiler version 5.7.0
+** Created by: Qt User Interface Compiler version 5.4.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -52,7 +52,6 @@ public:
     QLabel *labelTeamName;
     QGroupBox *groupBox_4;
     QHBoxLayout *horizontalLayout_2;
-    QRadioButton *radioTrackableButton;
     QRadioButton *grassRadioButton;
     QRadioButton *astroTurfRadioButton;
     QGroupBox *groupBox_3;
@@ -62,18 +61,16 @@ public:
     QGroupBox *groupBox_7;
     QGroupBox *groupBox_2;
     QGridLayout *gridLayout_3;
+    QLineEdit *address;
     QLineEdit *phoneNumber;
     QLabel *labelCity;
-    QLineEdit *address;
     QComboBox *state;
-    QLabel *labelAddress;
     QLineEdit *city;
-    QLabel *labelState;
     QLabel *labelPhone;
+    QLabel *labelAddress;
+    QLabel *labelState;
     QLineEdit *zip;
     QLabel *labelZipCode;
-    QLineEdit *starPlayer;
-    QLabel *labelStarPlayer;
     QGroupBox *groupBox_5;
     QVBoxLayout *verticalLayout_2;
     QTableWidget *souvenirsTable;
@@ -165,11 +162,6 @@ public:
         groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
         horizontalLayout_2 = new QHBoxLayout(groupBox_4);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        radioTrackableButton = new QRadioButton(groupBox_4);
-        radioTrackableButton->setObjectName(QStringLiteral("radioTrackableButton"));
-
-        horizontalLayout_2->addWidget(radioTrackableButton);
-
         grassRadioButton = new QRadioButton(groupBox_4);
         grassRadioButton->setObjectName(QStringLiteral("grassRadioButton"));
 
@@ -212,6 +204,11 @@ public:
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
         gridLayout_3 = new QGridLayout(groupBox_2);
         gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
+        address = new QLineEdit(groupBox_2);
+        address->setObjectName(QStringLiteral("address"));
+
+        gridLayout_3->addWidget(address, 3, 1, 1, 1);
+
         phoneNumber = new QLineEdit(groupBox_2);
         phoneNumber->setObjectName(QStringLiteral("phoneNumber"));
 
@@ -222,35 +219,30 @@ public:
 
         gridLayout_3->addWidget(labelCity, 0, 0, 1, 1);
 
-        address = new QLineEdit(groupBox_2);
-        address->setObjectName(QStringLiteral("address"));
-
-        gridLayout_3->addWidget(address, 3, 1, 1, 1);
-
         state = new QComboBox(groupBox_2);
         state->setObjectName(QStringLiteral("state"));
 
         gridLayout_3->addWidget(state, 1, 1, 1, 1);
-
-        labelAddress = new QLabel(groupBox_2);
-        labelAddress->setObjectName(QStringLiteral("labelAddress"));
-
-        gridLayout_3->addWidget(labelAddress, 3, 0, 1, 1);
 
         city = new QLineEdit(groupBox_2);
         city->setObjectName(QStringLiteral("city"));
 
         gridLayout_3->addWidget(city, 0, 1, 1, 1);
 
-        labelState = new QLabel(groupBox_2);
-        labelState->setObjectName(QStringLiteral("labelState"));
-
-        gridLayout_3->addWidget(labelState, 1, 0, 1, 1);
-
         labelPhone = new QLabel(groupBox_2);
         labelPhone->setObjectName(QStringLiteral("labelPhone"));
 
         gridLayout_3->addWidget(labelPhone, 4, 0, 1, 1);
+
+        labelAddress = new QLabel(groupBox_2);
+        labelAddress->setObjectName(QStringLiteral("labelAddress"));
+
+        gridLayout_3->addWidget(labelAddress, 3, 0, 1, 1);
+
+        labelState = new QLabel(groupBox_2);
+        labelState->setObjectName(QStringLiteral("labelState"));
+
+        gridLayout_3->addWidget(labelState, 1, 0, 1, 1);
 
         zip = new QLineEdit(groupBox_2);
         zip->setObjectName(QStringLiteral("zip"));
@@ -261,16 +253,6 @@ public:
         labelZipCode->setObjectName(QStringLiteral("labelZipCode"));
 
         gridLayout_3->addWidget(labelZipCode, 2, 0, 1, 1);
-
-        starPlayer = new QLineEdit(groupBox_2);
-        starPlayer->setObjectName(QStringLiteral("starPlayer"));
-
-        gridLayout_3->addWidget(starPlayer, 5, 1, 1, 1);
-
-        labelStarPlayer = new QLabel(groupBox_2);
-        labelStarPlayer->setObjectName(QStringLiteral("labelStarPlayer"));
-
-        gridLayout_3->addWidget(labelStarPlayer, 5, 0, 1, 1);
 
 
         verticalLayout_3->addWidget(groupBox_2);
@@ -347,28 +329,26 @@ public:
     {
         addstadium->setWindowTitle(QApplication::translate("addstadium", "Add Stadiums", 0));
         groupBox->setTitle(QApplication::translate("addstadium", "Stadium Information", 0));
-        label_8->setText(QApplication::translate("addstadium", "Football Conference", 0));
-        labelTypology->setText(QApplication::translate("addstadium", "Surface type", 0));
+        label_8->setText(QApplication::translate("addstadium", "League Type", 0));
+        labelTypology->setText(QApplication::translate("addstadium", "Stadium Typology", 0));
         label_9->setText(QApplication::translate("addstadium", "Date Opened", 0));
         label_10->setText(QApplication::translate("addstadium", "Seating Capacity", 0));
-        label_11->setText(QApplication::translate("addstadium", "Roof type", 0));
+        label_11->setText(QApplication::translate("addstadium", "Grass Surface Type", 0));
         labelStadiumName->setText(QApplication::translate("addstadium", "Stadium Name", 0));
         labelTeamName->setText(QApplication::translate("addstadium", "Team Name", 0));
         groupBox_4->setTitle(QString());
-        radioTrackableButton->setText(QApplication::translate("addstadium", "Retractable", 0));
-        grassRadioButton->setText(QApplication::translate("addstadium", "Open", 0));
-        astroTurfRadioButton->setText(QApplication::translate("addstadium", "Fixed", 0));
+        grassRadioButton->setText(QApplication::translate("addstadium", "Grass", 0));
+        astroTurfRadioButton->setText(QApplication::translate("addstadium", "Synthetic", 0));
         groupBox_3->setTitle(QString());
-        nationalLeagueRadioButton->setText(QApplication::translate("addstadium", "National", 0));
-        americanLeagueRadioButton->setText(QApplication::translate("addstadium", "American", 0));
+        nationalLeagueRadioButton->setText(QApplication::translate("addstadium", "National League", 0));
+        americanLeagueRadioButton->setText(QApplication::translate("addstadium", "American League", 0));
         groupBox_7->setTitle(QString());
         groupBox_2->setTitle(QApplication::translate("addstadium", "Address and Phone Number", 0));
         labelCity->setText(QApplication::translate("addstadium", "City", 0));
+        labelPhone->setText(QApplication::translate("addstadium", "Phone Number", 0));
         labelAddress->setText(QApplication::translate("addstadium", "Street Address", 0));
         labelState->setText(QApplication::translate("addstadium", "State", 0));
-        labelPhone->setText(QApplication::translate("addstadium", "Phone Number", 0));
         labelZipCode->setText(QApplication::translate("addstadium", "Zip Code", 0));
-        labelStarPlayer->setText(QApplication::translate("addstadium", "Star Player", 0));
         groupBox_5->setTitle(QApplication::translate("addstadium", "Stadium Souvenirs", 0));
         addSouvenirItem->setText(QApplication::translate("addstadium", "Add New Souvenir Item", 0));
         labelErrorMessage->setText(QString());

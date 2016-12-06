@@ -1,5 +1,5 @@
 #include "include/stadiumlist.h"
-#include <QDebug>
+
 /*************************************************************************
 * Constructors & Destructors
 *************************************************************************/
@@ -70,7 +70,6 @@ void StadiumList::loadStadiumListFromFile(string filename)
 
     std::string stadiumName = "";
     std::string teamName = "";
-    std::string starPlayer = "";
     std::string stadiumStreetAddress = "";
     std::string stadiumCityStateZip = "";
     std::string stadiumPhoneNumber = "";
@@ -92,8 +91,6 @@ void StadiumList::loadStadiumListFromFile(string filename)
     while (!inFile.eof()) {
         getline(inFile, stadiumName);
         getline(inFile, teamName);
-        getline(inFile, starPlayer);
-//        qDebug () << QString::fromStdString(starPlayer) << " ";
         getline(inFile, stadiumStreetAddress);
         getline(inFile, stadiumCityStateZip);
         getline(inFile, stadiumPhoneNumber);
@@ -111,7 +108,7 @@ void StadiumList::loadStadiumListFromFile(string filename)
         newStadium = new Stadium(stadiumName, teamName, stadiumStreetAddress,
                                  stadiumCityStateZip, stadiumPhoneNumber,
                                  leagueType, *dateOpened, stadiumCapacity,
-                                 surfaceType, typology, starPlayer);
+                                 surfaceType, typology);
         addStadium(*newStadium);
 
         getline(inFile, traversalString);
@@ -136,7 +133,6 @@ void StadiumList::loadSouvenirs(string filename)
 
     // open file
     inFile.open(filename.c_str());
-
 
     // while in the file
     while (!inFile.eof()) {
@@ -259,7 +255,6 @@ void StadiumList::saveStadiumList()
         // write stadium data to file
         outFile << stadium(i)->name() << endl;
         outFile << stadium(i)->team() << endl;
-        outFile << stadium(i)->getStarPlayer() << endl;
         outFile << stadium(i)->streetAddress() << endl;
         outFile << stadium(i)->cityStateZip() << endl;
         outFile << stadium(i)->phoneNumber() << endl;
@@ -396,9 +391,6 @@ bool SeatingCapacityCompare(const Stadium stadium1, const Stadium stadium2) {
 bool TypologyCompare(const Stadium stadium1, const Stadium stadium2) {
     return ((stadium1.typology()) < (stadium2.typology()));
 }
-bool StarPlayerCompare(const Stadium stadium1, const Stadium stadium2){
-    return ((stadium1.getStarPlayer()) < (stadium2.getStarPlayer()));
-}
 bool DateOpenedCompare(const Stadium stadium1, const Stadium stadium2) {
     //year1 < year2 ?
     if( stadium1.dateOpened().GetYear() < stadium2.dateOpened().GetYear() ){
@@ -462,7 +454,5 @@ void StadiumList::sortBySeatingCapacity() {
 void StadiumList::sortByParkTypology() {
     std::sort(stadiumList.begin(), stadiumList.end(), TypologyCompare);
 }
-void StadiumList::sortByStarPlayer()
-{
-    std::sort(stadiumList.begin(), stadiumList.end(), StarPlayerCompare);
-}
+
+

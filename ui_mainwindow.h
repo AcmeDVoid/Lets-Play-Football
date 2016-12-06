@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.7.0
+** Created by: Qt User Interface Compiler version 5.4.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -41,7 +41,6 @@ public:
     QGroupBox *groupBox;
     QVBoxLayout *verticalLayout_2;
     QLabel *main_pic;
-    QPushButton *buttonViewTeams;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QStatusBar *statusBar;
@@ -50,7 +49,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1201, 465);
+        MainWindow->resize(1137, 465);
         QIcon icon;
         icon.addFile(QStringLiteral(":/nfl icon.png"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
@@ -99,18 +98,13 @@ public:
 
         verticalLayout_2->addWidget(main_pic);
 
-        buttonViewTeams = new QPushButton(groupBox);
-        buttonViewTeams->setObjectName(QStringLiteral("buttonViewTeams"));
-
-        verticalLayout_2->addWidget(buttonViewTeams);
-
 
         horizontalLayout->addWidget(groupBox);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1201, 21));
+        menuBar->setGeometry(QRect(0, 0, 1137, 21));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QStringLiteral("menuFile"));
         MainWindow->setMenuBar(menuBar);
@@ -136,7 +130,6 @@ public:
         buttonViewStadiums->setText(QApplication::translate("MainWindow", "View Stadiums", 0));
         groupBox->setTitle(QString());
         main_pic->setText(QString());
-        buttonViewTeams->setText(QApplication::translate("MainWindow", "View Teams", 0));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", 0));
     } // retranslateUi
 

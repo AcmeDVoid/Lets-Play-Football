@@ -33,8 +33,12 @@ private slots:
      */
     void on_buttonViewStadiums_clicked();
 
-
-    void on_buttonViewTeams_clicked();
+    /**
+     * @brief on_buttonTripPlanner_clicked
+     * the handler for when the button trip planner is
+     * clicked
+     */
+    void on_buttonTripPlanner_clicked();
 
 private:
     Ui::MainWindow *ui;

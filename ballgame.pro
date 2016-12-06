@@ -37,9 +37,7 @@ SOURCES += src/main.cpp\
     src/shoppingsummarywindow.cpp \
     src/viewrevenue.cpp \
     src/modifystadium.cpp \
-    src/modifystadiumselector.cpp \
-    src/viewteamwindow.cpp \
-    src/map.cpp
+    src/modifystadiumselector.cpp
 
 
 HEADERS  += include/mainwindow.h \
@@ -59,10 +57,7 @@ HEADERS  += include/mainwindow.h \
     include/shoppingsummarywindow.h \
     include/viewrevenue.h \
     include/modifystadium.h \
-    include/modifystadiumselector.h \
-    include/viewteamwindow.h \
-    include/stadiumnode.h \
-    include/map.h
+    include/modifystadiumselector.h
 
 FORMS    += ui/mainwindow.ui \
             ui/splashscreen.ui \
@@ -77,8 +72,7 @@ FORMS    += ui/mainwindow.ui \
     ui/shoppingsummarywindow.ui \
     ui/viewrevenue.ui \
     ui/modifystadium.ui \
-    ui/modifystadiumselector.ui \
-    ui/viewteamwindow.ui
+    ui/modifystadiumselector.ui
 
 RESOURCES += \
     assets/img.qrc

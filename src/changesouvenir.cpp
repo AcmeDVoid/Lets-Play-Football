@@ -143,6 +143,7 @@ void changesouvenir::on_selectStadium_currentIndexChanged(int index)
  */
 void changesouvenir::saveMenu(int index){
 
+    Stadium* stadiumPtr = sList->stadium(index);
     QMessageBox msgBox;
     msgBox.setText("The Menu has been modified.");
     msgBox.setInformativeText("Do you want to save your changes?");
@@ -318,7 +319,6 @@ bool changesouvenir::deleteRequestIsValid(){
         ui->errorLabel->setText("Select only one row to delete.");
         return false;
     }
-    return false;
 }
 /**
  * @brief changesouvenir::on_deleteButton_clicked

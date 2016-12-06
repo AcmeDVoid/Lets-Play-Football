@@ -9,11 +9,10 @@ ViewStadiumWindow::ViewStadiumWindow(StadiumList *sList, QWidget *parent) :
 
     // default values of what to display
     stadiumList = sList;
-//    displayGrassSurfaces = true;
-//    displayAstroturfSurfaces = true;
+    displayGrassSurfaces = true;
+    displayAstroturfSurfaces = true;
     displayNationalLeague = true;
     displayAmericanLeague = true;
-    displayOpenStadiumRoofType = true;
 
     // add group boxes of radio buttons and checkboxes to the layout
     ui->vlSorts->addWidget(createSortRadioButtonGroupBox());
@@ -59,8 +58,8 @@ QGroupBox *ViewStadiumWindow::createFilterCheckBoxGroupBox()
 {
     QStringList filterNames;
     // list of possible filters
-    filterNames << "American Football Conference" << "National Football Conference"
-                << "\'Open\' Stadium Roof Type";
+    filterNames << "American League Stadiums" << "National League Stadiums" << "Synthetic Surface Stadiums"
+                << "Grass Surface Stadiums";
 
     // label group filters
     QGroupBox *groupBox = new QGroupBox(tr("Filter"));
@@ -94,20 +93,19 @@ void ViewStadiumWindow::renderStadiumList()
     // clear the view displaying the stadium list
     stadiumListBrowser->clear();
 
-    int totalCapacity = 0;
     // for every stadium
     for (unsigned int i = 0; i < stadiumList->size(); i++) {
         Stadium *currentStadium = stadiumList->stadium(i);
 
-//        // if the stadium has grass surface and grass is filtered out continue
-//        if (!displayGrassSurfaces && currentStadium->surface() == "Grass") {
-//            continue;
-//        }
+        // if the stadium has grass surface and grass is filtered out continue
+        if (!displayGrassSurfaces && currentStadium->surface() == "Grass") {
+            continue;
+        }
 
-//        // if the stadium has astro turf surface and it is filtered out continue
-//        if (!displayAstroturfSurfaces && currentStadium->surface() == "Astro turf") {
-//            continue;
-//        }
+        // if the stadium has astro turf surface and it is filtered out continue
+        if (!displayAstroturfSurfaces && currentStadium->surface() == "Astro turf") {
+            continue;
+        }
 
         // if the stadium is national and its filtered out continue
         if (!displayNationalLeague && currentStadium->type() == "National") {
@@ -118,36 +116,26 @@ void ViewStadiumWindow::renderStadiumList()
         if (!displayAmericanLeague && currentStadium->type() == "American") {
             continue;
         }
-        // if the stadium roof type is open and its filtered out continue
-        if (displayOpenStadiumRoofType && currentStadium->typology() != "Open") {
-            continue;
-        }
-
-        totalCapacity += currentStadium->capacity();
 
         QStringList detailList;
         // build the qstring list of stadium attributes to display
         detailList << QString::fromStdString("Stadium Name: " + currentStadium->name());
-        detailList << QString::fromStdString("Team Name    : " + currentStadium->team());
-        detailList << QString::fromStdString("Star Player     : " + currentStadium->getStarPlayer());
-        detailList << QString::fromStdString("Address          : " +  currentStadium->cityStateZip());
+        detailList << QString::fromStdString("Team Name: " + currentStadium->team());
+        detailList << QString::fromStdString("Address: " + currentStadium->streetAddress() + ", " + currentStadium->cityStateZip());
         detailList << QString::fromStdString("Phone Number: " + currentStadium->phoneNumber());
-        detailList << QString::fromStdString("Conference     : " + currentStadium->type());
-        detailList << QString::fromStdString("Date Opened  : " + currentStadium->dateOpened().DisplayDate());
-        detailList << "Capacity         : " + QString::number(currentStadium->capacity());
-        detailList << QString::fromStdString("Surface type  : " + currentStadium->surface());
-        detailList << QString::fromStdString("Roof type       : " + currentStadium->typology());
-
+        detailList << QString::fromStdString("League: " + currentStadium->type());
+        detailList << QString::fromStdString("Date Opened: " + currentStadium->dateOpened().DisplayDate());
+        detailList << "Capacity: " + QString::number(currentStadium->capacity());
+        detailList << QString::fromStdString("Surface: " + currentStadium->surface());
+        detailList << QString::fromStdString("Typology: " + currentStadium->typology());
 
         // add all strings in the list to the display
         for (int j = 0; j < detailList.size(); j++) {
             QString currentDetail = detailList[j];
             stadiumListBrowser->append(currentDetail);
-
         }
         stadiumListBrowser->append("");
     }
-    QMessageBox::information(this,"Seating Capacity","Total seating capacity of all stadiums is " + QString::number(totalCapacity),"OK");
 }
 
 void ViewStadiumWindow::onCheckBoxClick(bool)
@@ -162,15 +150,12 @@ void ViewStadiumWindow::onCheckBoxClick(bool)
     else if (checkBox->text() == "National League Stadiums") {
         displayNationalLeague = checkBox->isChecked();
     }
-    else if (checkBox->text() == "\'Open\' Stadium Roof Type") {
-        displayOpenStadiumRoofType = checkBox->isChecked();
+    else if (checkBox->text() == "Astro turf Surface Stadiums") {
+        displayAstroturfSurfaces = checkBox->isChecked();
     }
-//    else if (checkBox->text() == "Astro turf Surface Stadiums") {
-//        displayAstroturfSurfaces = checkBox->isChecked();
-//    }
-//    else if (checkBox->text() == "Grass Surface Stadiums") {
-//        displayGrassSurfaces = checkBox->isChecked();
-//    }
+    else if (checkBox->text() == "Grass Surface Stadiums") {
+        displayGrassSurfaces = checkBox->isChecked();
+    }
 
     // redisplay the stadium list
     renderStadiumList();
@@ -197,11 +182,8 @@ void ViewStadiumWindow::onRadioButtonClick(bool)
     else if (radioButton->text() == "Surface") {
         stadiumList->sortByGrassSurface();
     }
-    else if (radioButton->text() == "Roof Type") {
+    else if (radioButton->text() == "Typology") {
         stadiumList->sortByParkTypology();
-    }
-    else if (radioButton->text() == "Player Name") {
-        stadiumList->sortByStarPlayer();
     }
 
     // redisplay stadium list

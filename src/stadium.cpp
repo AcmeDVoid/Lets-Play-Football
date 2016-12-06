@@ -3,7 +3,7 @@
 /*************************************************************************
 * Constructors & Destructors
 *************************************************************************/
-Stadium::Stadium(std::string newName, std::string newTeamName, std::string newStreetAddress, string newCityStateZip, std::string newPhoneNumber, std::string newTeamType, Date newDate, int newCapacity, std::string newSurface, std::string newTypology, std::string newStarPlayer)
+Stadium::Stadium(std::string newName, std::string newTeamName, std::string newStreetAddress, string newCityStateZip, std::string newPhoneNumber, std::string newTeamType, Date newDate, int newCapacity, std::string newSurface, std::string newTypology)
 {
     // set the values from the parameters
     stadiumName = newName;
@@ -18,7 +18,6 @@ Stadium::Stadium(std::string newName, std::string newTeamName, std::string newSt
     stadiumRevenue = 0.0;
     stadiumSalesCount = 0;
     stadiumTypology = newTypology;
-    starPlayer = newStarPlayer;
 }
 
 // destructor
@@ -166,7 +165,7 @@ std::string Stadium::league(){
 
 void Stadium::updateStadium(std::string newStadiumName,
                    std::string newTeamName,
-                   std::string newTypology, string newStarPlayer,
+                   std::string newTypology,
                    Date newDateOpened,
                    int newStadiumCapacity,
                    std::string newLeagueType,
@@ -188,16 +187,11 @@ void Stadium::updateStadium(std::string newStadiumName,
     this->stadiumCityStateZip = newCity + ", " + newState + " " + newZipCode;
     this->stadiumStreetAddress = newStreetAddress;
     this->stadiumPhoneNumber = newPhoneNumber;
-    this->starPlayer = newStarPlayer;
 
 }
 
 void Stadium::updateSouvenirList(std::map<int,Souvenir> newList){
     // replace the map with the parameter map
     this->souvenirMap = newList;
-}
-std::string Stadium::getStarPlayer() const
-{
-    return starPlayer;
 }
 

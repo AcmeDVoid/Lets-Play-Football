@@ -88,6 +88,18 @@ private slots:
      */
     void on_cancelButton_clicked();
 
+    /**
+     * @brief on_comboBoxEdge_currentIndexChanged
+     * @param index the index that the has changed
+     */
+    void on_comboBoxEdge_currentIndexChanged(int index);
+
+    /**
+     * @brief on_spinnerEdge_valueChanged
+     * @param arg1 the argument that has changed
+     */
+    void on_spinnerEdge_valueChanged(int arg1);
+
 private:
     Ui::addstadium *ui;         /// the ui pointer, reference the window
     StadiumList* masterList;    /// a pointer to the master stadiumList

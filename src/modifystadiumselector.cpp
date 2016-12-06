@@ -36,7 +36,7 @@ void modifyStadiumSelector::loadTable(){
     //save a reference to the number of teams in the stadium list
     int listSize = this->masterList->size();
 
-    for( int i = 0; i < listSize; i++){
+    for(unsigned int i = 0; i < listSize; i++){
         //note: 0 = stadium name column
         //note: 1 = team name column
         ui->stadiumTable->insertRow(i);

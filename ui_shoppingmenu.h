@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'shoppingmenu.ui'
 **
-** Created by: Qt User Interface Compiler version 5.7.0
+** Created by: Qt User Interface Compiler version 5.4.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -161,6 +161,7 @@ public:
         next->setObjectName(QStringLiteral("next"));
         next->setMaximumSize(QSize(250, 16777215));
         next->setAutoDefault(true);
+        next->setDefault(false);
         next->setFlat(false);
 
         horizontalLayout_3->addWidget(next);
@@ -187,9 +188,6 @@ public:
         retranslateUi(shoppingMenu);
         QObject::connect(okay_cancel, SIGNAL(accepted()), shoppingMenu, SLOT(accept()));
         QObject::connect(okay_cancel, SIGNAL(rejected()), shoppingMenu, SLOT(reject()));
-
-        next->setDefault(false);
-
 
         QMetaObject::connectSlotsByName(shoppingMenu);
     } // setupUi

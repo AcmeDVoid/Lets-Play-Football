@@ -110,7 +110,6 @@ public:
     void sortByDateOpened();
     void sortBySeatingCapacity();
     void sortByParkTypology();
-    void sortByStarPlayer();
 
 //        Graph* graph();
 
