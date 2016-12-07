@@ -466,3 +466,4 @@ void StadiumList::sortByStarPlayer()
 {
     std::sort(stadiumList.begin(), stadiumList.end(), StarPlayerCompare);
 }
+

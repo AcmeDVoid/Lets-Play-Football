@@ -22,10 +22,23 @@ private slots:
 
     void on_checkBox_NFC_clicked();
 
+    void on_radioButton_clicked();
+
+    void on_radioButton_5_clicked();
+
+    void on_radioButton_2_clicked();
+
+    void on_radioButton_6_clicked();
+
+    void on_checkBox_openRoof_clicked();
+
+    void on_radioButton_3_clicked();
+
 private:
     Ui::ViewTeamWindow *ui;
     StadiumList *stadiumList;
     void renderTeamList();
+    void setColumns();
 };
 
 #endif // VIEWTEAMWINDOW_H

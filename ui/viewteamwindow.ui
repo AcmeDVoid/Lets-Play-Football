@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>706</width>
-    <height>537</height>
+    <width>828</width>
+    <height>536</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,13 +22,52 @@
     <rect>
      <x>9</x>
      <y>9</y>
-     <width>691</width>
+     <width>811</width>
      <height>511</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QTextBrowser" name="textBrowser"/>
+     <widget class="QTableWidget" name="teamTable">
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>85</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Team Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Stadium</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Star Player</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Conference</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Capacity</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Surface Type</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Roof Type</string>
+       </property>
+      </column>
+     </widget>
     </item>
     <item>
      <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -81,17 +120,7 @@
       <item>
        <widget class="QRadioButton" name="radioButton_2">
         <property name="text">
-         <string>Stadium Capacity</string>
-        </property>
-        <attribute name="buttonGroup">
-         <string notr="true">buttonGroup</string>
-        </attribute>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="radioButton_4">
-        <property name="text">
-         <string>Stadium Name</string>
+         <string>Seating Capacity</string>
         </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
@@ -184,6 +213,13 @@
         </property>
         <property name="checked">
          <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox_openRoof">
+        <property name="text">
+         <string>Open Roof Only</string>
         </property>
        </widget>
       </item>

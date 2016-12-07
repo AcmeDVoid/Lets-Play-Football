@@ -79,17 +79,18 @@ void TripPlanner::on_buttonStartTrip_clicked()
     }
 
     QStringList selectedStadiums = checkedBoxes();
+    qDebug() << "A";
     QStringList path;
     std::stack<string> totalPathStack;
-
+qDebug() << "A";
     //get current text from the combo box and store it in a startign city variable
     string startingCity = ui->comboBoxStarting->currentText().toStdString();
-
+qDebug() << "A";
     Vertex *startVertex = stadiumList->graph()->findVertex(startingCity);
-
+qDebug() << "A";
 
     path.push_back(QString::fromStdString(startVertex->name()));
-
+qDebug() << "A";
     while (!selectedStadiums.empty()) {
         Vertex *nextStadium = stadiumList->graph()->findClosest(startVertex, selectedStadiums);
         std::stack<string> pathStack = stadiumList->graph()
@@ -103,7 +104,7 @@ void TripPlanner::on_buttonStartTrip_clicked()
             qDebug() << QString::fromStdString(pathStack.top());
             pathStack.pop();
         }
-
+qDebug() << "A";
         selectedStadiums.removeOne(QString::fromStdString(nextStadium->name()));
         startVertex = nextStadium;
     }
