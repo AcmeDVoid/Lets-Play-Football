@@ -16,6 +16,7 @@ ViewTeamWindow::~ViewTeamWindow()
     delete ui;
 }
 
+
 void ViewTeamWindow::renderTeamList()
 {
     ui->teamTable->clear();
@@ -49,6 +50,7 @@ void ViewTeamWindow::renderTeamList()
         ui->teamTable->setItem(i, 6, new QTableWidgetItem(QString::fromStdString(currentStadium->typology())));
     }
 }
+
 
 void ViewTeamWindow::setColumns()
 {
