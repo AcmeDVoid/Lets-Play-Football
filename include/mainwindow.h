@@ -33,8 +33,6 @@ private slots:
      */
     void on_buttonViewStadiums_clicked();
 
-    void on_buttonTripPlanner_Clicked();
-
     void on_buttonViewTeams_clicked();
 
 

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'addstadium.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.4.2)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,7 +12,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'addstadium.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.4.2. It"
+#error "This file was generated using the moc from 5.7.0. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -20,11 +20,11 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_addstadium_t {
     QByteArrayData data[5];
-    char stringdata[91];
+    char stringdata0[91];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_addstadium_t, stringdata) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_addstadium_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_addstadium_t qt_meta_stringdata_addstadium = {
@@ -72,6 +72,7 @@ void addstadium::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         addstadium *_t = static_cast<addstadium *>(_o);
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_addSouvenirItem_clicked(); break;
         case 1: _t->on_addStadiumButton_clicked(); break;
@@ -96,7 +97,7 @@ const QMetaObject *addstadium::metaObject() const
 void *addstadium::qt_metacast(const char *_clname)
 {
     if (!_clname) return Q_NULLPTR;
-    if (!strcmp(_clname, qt_meta_stringdata_addstadium.stringdata))
+    if (!strcmp(_clname, qt_meta_stringdata_addstadium.stringdata0))
         return static_cast<void*>(const_cast< addstadium*>(this));
     return QDialog::qt_metacast(_clname);
 }
