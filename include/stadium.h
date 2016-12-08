@@ -170,6 +170,7 @@ public:
      * @param newZipCode - set the zip code
      * @param newStreetAddress - set the street address
      * @param newPhoneNumber - set the phone number
+     * @param newStarPlayer - set the star player
      */
     void updateStadium(std::string newStadiumName,
                        std::string newTeamName,
@@ -202,7 +203,7 @@ private:
     Date stadiumDateOpened;             /// the date that the stadium opened
     int stadiumCapacity;                /// the capacity of visitors the stadium will hold
     std::string stadiumSurface;         /// the surface type - grass or astroturf
-    std::string stadiumTypology;        /// the typology of the staidum, modern, retor, etc
+    std::string stadiumTypology;        /// the
     double stadiumRevenue;              /// a running accumulation of the revenu the stadium has generated
     int stadiumSalesCount;              /// the number of sales the stadium has made (quantity)
     unsigned int souvenirsCount;        /// that count of souvenirs a stadium has

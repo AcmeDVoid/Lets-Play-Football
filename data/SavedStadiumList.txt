@@ -13,8 +13,8 @@ Retractable
 Arrowhead Stadium
 Kansas City Chiefs
 Justin Houston
-Arrowhead Stadium' Address
-Kansas City, Missouri
+Arrowhead Stadium' Address Kansas City, Missouri Kansas City,  12345
+Kansas City,  12345
 (123) 456-7890
 1 1 2000
 76416
@@ -49,8 +49,8 @@ Open
 EverBank Field
 Jacksonville Jaguars
 Allen Robinson
-EverBank Field's Address
-Jacksonville, Florida
+EverBank Field's Address Jacksonville, Florida
+Jacksonville,  1234567
 (123) 456-7890
 1 1 2000
 67246

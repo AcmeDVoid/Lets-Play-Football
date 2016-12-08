@@ -57,6 +57,7 @@ void modifyStadium::loadDefaults(){
     QString surfaceTypeFormData = QString::fromStdString(thisStadium->surface());
     QString starPlayerFormData = QString::fromStdString(thisStadium->getStarPlayer());
 
+
     //parse city, state and zip -> ex: Detroit, MI 48201
     std::stringstream ss(thisStadium->cityStateZip());
 
@@ -90,6 +91,7 @@ void modifyStadium::loadDefaults(){
     ui->address->setText(streetAddressFormData);
     ui->phoneNumber->setText(phoneNumberFormData);
     ui->starPlayer->setText(starPlayerFormData);
+
 
 
     //league types
@@ -206,10 +208,14 @@ void modifyStadium::on_updateStadiumButton_clicked()
     std::string stadiumTypology = ui->stadiumTypology->text().toStdString();
     std::string city  = ui->city->text().toStdString();
     std::string zip   = ui->zip->text().toStdString();
+    std::string state = ui->state->currentText().toStdString();
     std::string stadiumPhoneNumber = ui->phoneNumber->text().toStdString();
     std::string stadiumStreetAddress = ui->address->text().toStdString();
     std::string stadiumStarPlayer = ui->starPlayer->text().toStdString();
+    std::string leagueType;
+    std::string roofType;
 
+    int stadiumCapacity = ui->capacity->text().toInt();
     ui->labelErrorMessage->setText("");
     ui->labelErrorMessage->setPalette(invalidPalette);
     ui->labelTeamName->setPalette(validPalette);
@@ -219,6 +225,7 @@ void modifyStadium::on_updateStadiumButton_clicked()
     ui->labelTypology->setPalette(validPalette);
     ui->labelCity->setPalette(validPalette);
     ui->labelAddress->setPalette(validPalette);
+    ui->label->setPalette(validPalette);
 
     if (stadiumTypology.length() == 0) {
         valid = false;
@@ -240,10 +247,12 @@ void modifyStadium::on_updateStadiumButton_clicked()
         valid = false;
         ui->labelPhone->setPalette(invalidPalette);
     }
+    if(stadiumStarPlayer.length() == 0)
+    {
+        valid = false;
+        ui->label->setPalette(invalidPalette);
+    }
     if (valid) {
-        std::string leagueType;
-        std::string roofType;
-
         if(ui->americanLeagueRadioButton->isChecked()){
             leagueType = "American";
         }
@@ -268,23 +277,10 @@ void modifyStadium::on_updateStadiumButton_clicked()
 //        this->stadiumVertex->setName(ui->stadiumName->text().toStdString());
 
         //update the entire stadium object
-        stadiumToEdit->updateStadium(/*stadiumName,//*/ui->stadiumName->text().toStdString(),
-                                    /*teamName,//*/ui->teamName->text().toStdString(),
-                                    roofType,
-                                    /*stadiumStarPlayer,//*/ui->starPlayer->text().toStdString(),
-                                    /*m, d, y*/
-                                    Date(ui->dateOpened->date().month(),
-                                         ui->dateOpened->date().day(),
-                                         ui->dateOpened->date().year()),
-                                    ui->capacity->text().toInt(),
-                                    leagueType,
-                                    stadiumTypology,//ui->stadiumTypology->text().toStdString(),roofType,
-                                    ui->city->text().toStdString(),
-                                    ui->state->currentText().toStdString(),
-                                    ui->zip->text().toStdString(),
-                                    ui->address->text().toStdString(),
-                                    ui->phoneNumber->text().toStdString()
-                                    );
+        Date openingDay = Date(ui->dateOpened->date().month(), ui->dateOpened->date().day(), ui->dateOpened->date().year());
+        stadiumToEdit->updateStadium(stadiumName, teamName, roofType, stadiumStarPlayer, openingDay, stadiumCapacity, leagueType,
+                                     stadiumTypology, city, state, zip, stadiumStreetAddress, stadiumPhoneNumber);
+
         //make it persistent
         masterList->saveStadiumList();
         masterList->saveSouvenirs();

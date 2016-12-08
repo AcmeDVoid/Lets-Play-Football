@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'administrator.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.4.2)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.7.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,7 +12,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'administrator.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.4.2. It"
+#error "This file was generated using the moc from 5.7.0. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -20,11 +20,11 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_administrator_t {
     QByteArrayData data[6];
-    char stringdata[108];
+    char stringdata0[108];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_administrator_t, stringdata) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_administrator_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_administrator_t qt_meta_stringdata_administrator = {
@@ -75,6 +75,7 @@ void administrator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         administrator *_t = static_cast<administrator *>(_o);
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_pushButton_3_clicked(); break;
         case 1: _t->on_pushButton_clicked(); break;
@@ -100,7 +101,7 @@ const QMetaObject *administrator::metaObject() const
 void *administrator::qt_metacast(const char *_clname)
 {
     if (!_clname) return Q_NULLPTR;
-    if (!strcmp(_clname, qt_meta_stringdata_administrator.stringdata))
+    if (!strcmp(_clname, qt_meta_stringdata_administrator.stringdata0))
         return static_cast<void*>(const_cast< administrator*>(this));
     return QDialog::qt_metacast(_clname);
 }
