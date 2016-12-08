@@ -11,9 +11,9 @@ int main(int argc, char *argv[])
     StadiumList *sList = new StadiumList();
     sList->initialize();
     sList->saveStadiumList();
-//    sList->saveSouvenirs();
-//    sList->saveRevenue();
-//    sList->graph()->saveAll();
+   sList->saveSouvenirs();
+   sList->saveRevenue();
+   sList->graph()->saveAll();
 
     MainWindow w(sList);
     w.show();
