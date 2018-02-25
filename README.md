@@ -12,7 +12,7 @@ The application will allow football fans to plan their dream vacation using the 
 ### About the Scrum process
 * There were three sprints total during the development
 * A total of 13 agile stories (including description, tasks, test scenarios, and story points) were writen before the software is developed
-* Definition of __Done__: Completion of the user story or at least the graphical user interface is ready of that user story
+* Definition of __Done__: Completion of the user story or for the least the graphical user interface is ready for that user story
 
 ### For more details, please go to the The Brogrammer's artifacts
 
