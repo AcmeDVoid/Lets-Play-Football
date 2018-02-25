@@ -17,5 +17,5 @@ The application will allow football fans to plan their dream vacation using the 
 ### For more details, please go to the The Brogrammer's artifacts
 
 #### Note: Feel free to fork this project however if you're taking CS1D, I don't recommend doing that for two main reasons:
-* This project uses an old version of Qt and sqlLite and I won't update it.
+* This project uses an old version of Qt and I won't update it.
 * Academic Dishonesty, resulting an F for the course.
