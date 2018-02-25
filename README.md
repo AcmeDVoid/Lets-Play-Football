@@ -1,12 +1,21 @@
+# Lets Play Football
 
-# TheBrogrammer 
+## CS1D Final Project - 2016
+1. Made by The Brogrammer - a team of ~~five~~ three members
+2. Used Qt (version 5.5) - a cross-platform application framework to provide graphical user interface in c++
+3. Used Scrum - an agile framework for software development
+4. Used Travis - a hosted, distributed continuous integration service during the developing process
 
-[![Build Status](https://travis-ci.com/AcmeDVoid/TheBrogrammer.svg?token=u2SJCaqsHMs5vGCjvbZp&branch=master)](https://github.com/AcmeDVoid/TheBrogrammer)
+### Description:
+The application will allow football fans to plan their dream vacation using the data stores the given National Football League (NFL) infomation.
 
+### About the Scrum process
+* There were three sprints total during the development
+* A total of 13 agile stories (including description, tasks, test scenarios, and story points) were writen before the software is developed
+* Definition of __Done__: Completion of the user story or at least the graphical user interface is ready of that user story
 
-CS1D Final Project
+### For more details, please go to the The Brogrammer's artifacts
 
-
-Link to artifact (User Story + BackLog + Test Plan): https://drive.google.com/drive/folders/0BzF8TKdUtKXVQnQxV1lnWC1sbnc?usp=sharing
-
-Waffle.io: https://waffle.io/AcmeDVoid/TheBrogrammer/join
+#### Note: Feel free to fork this project however if you're taking CS1D, I don't recommend doing that for two main reasons:
+* This project uses an old version of Qt and sqlLite and I won't update it.
+* Academic Dishonesty, resulting an F for the course.
